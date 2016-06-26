@@ -1,0 +1,87 @@
+<html>
+	<head>
+	<style>
+		body {
+			margin : 0;
+		}
+		.ren-streetview-container {
+			width : 100%;
+			height : 80%;
+		}
+		.ren-navigator {
+			width: 100%;
+			background-color : white;
+			height : 10%;
+			box-shadow : 2px 2px 2px rgba(0,0,0,0.5) !important;
+			z-index : 1;
+		}
+		
+		iframe {
+			z-index: 0;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+			FB.init({
+			  appId      : '598705273637123',
+			  xfbml      : true,
+			  version    : 'v2.6'
+			});
+		  };
+
+		  (function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "https://connect.facebook.net/en_US/sdk.js&version=v2.6";
+			 fjs.parentNode.insertBefore(js, fjs);
+		   }(document, 'script', 'facebook-jssdk'));
+		</script>
+		
+		<script>
+		window.onload = function(){
+			FB.api(
+				"/305174909621603/feed",
+				function (response) {
+				  if (response && !response.error) {
+					console.log(response);
+				  }
+				}
+			);
+		}
+		</script>
+		
+		
+		
+		<div class='ren-navigator'>
+		</div>
+		<div class='ren-streetview-container'>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1snl!2sbe!4v1465652410324!6m8!1m7!1sbQQbEkOr3xcAAAQvOwGSFg!2m2!1d51.07809771997777!2d5.07711123201284!3f236.72610183235417!4f17.628794555838752!5f0.4000000000000002" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>
+			</iframe>
+		</div>
+		<!-- Begin VR Signup Form -->
+<form class="vr-signup-form" id="vr-signup-form-17592186045076">
+	<div class="vr-field">
+		<span class="vr-required">*</span>
+		<label>Email Address</label>
+		<input type="email" name="email_address" required>
+	</div>
+	<div class="vr-submit">
+		<div class="vr-notice"></div>
+		<input type="submit" value="Sign Up">
+	</div>
+</form>
+<link media="all" rel="stylesheet" type="text/css" href="https://vr2.verticalresponse.com/signup_forms/signup_forms.embedded-2.css">
+<script type="text/javascript" src="https://vr2.verticalresponse.com/signup_forms/signup_forms.embedded-2.js"></script>
+<script type="text/javascript">
+	if (typeof VR !== "undefined" && typeof VR.SignupForm !== "undefined") { 
+		new VR.SignupForm({ id: "17592186045076", element: "vr-signup-form-17592186045076", endpoint: "https://vr2.verticalresponse.com/se/"}); 
+	}
+	
+</script>
+<!-- End VR Signup Form -->
+	</body>
+</html>
