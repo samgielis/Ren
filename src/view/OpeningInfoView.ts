@@ -27,7 +27,7 @@ export function openingInfoView (openingInfo : FBOpeningInfo) : HTMLElement {
 function dayView (day : string, hours : string[]) : HTMLElement {
     let dayview = document.createElement('div'),
         hourview : string = hourView(hours);
-    dayview.innerText = daysTranslation[day] + ' : ' + hourview;
+    dayview.innerHTML = daysTranslation[day] + ' : ' + hourview;
     return dayview;
 }
 
@@ -45,9 +45,9 @@ function hourView (hours : string[]) : string {
 function currentlyOpenView (currentlyOpen : boolean) : HTMLElement {
     let view = document.createElement('p');
     if (currentlyOpen) {
-        view.innerText = 'Nu Open!';
+        view.innerHTML = 'Nu Open!';
     } else {
-        view.innerText = 'Momenteel gesloten';
+        view.innerHTML = 'Momenteel gesloten';
     }
     return view;
 }

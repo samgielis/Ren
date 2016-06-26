@@ -5,14 +5,14 @@ import {openingInfoView} from "./view/OpeningInfoView";
 export class Ren {
 
     private _facebookSDK : FacebookSDK;
-    private _openingHours : FBOpeningInfo;
+    private _openingInfo : FBOpeningInfo;
 
     constructor () {
         this._facebookSDK = new FacebookSDK();
         this._facebookSDK.afterLoad(() => {
-            this._openingHours = new FBOpeningInfo();
-            this._openingHours.afterLoad(() => {
-                let view = openingInfoView(this._openingHours);
+            this._openingInfo = new FBOpeningInfo();
+            this._openingInfo.afterLoad(() => {
+                let view = openingInfoView(this._openingInfo);
                 (<HTMLElement>document.querySelector('#ren-openingsuren')).appendChild(view);
             });
         });
@@ -22,8 +22,8 @@ export class Ren {
         return {};
     }
 
-    public get openingHours () : FBOpeningInfo {
-        return this._openingHours;
+    public get openingInfo () : FBOpeningInfo {
+        return this._openingInfo;
     }
 
     public get facebookSDK () : FacebookSDK {
