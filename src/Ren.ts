@@ -27,6 +27,6 @@ export class Ren {
     }
 
     public get facebookSDK () : FacebookSDK {
-        return this.facebookSDK;
+        return this._facebookSDK;
     };
 }
