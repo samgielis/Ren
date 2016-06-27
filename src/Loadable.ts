@@ -37,6 +37,7 @@ export abstract class Loadable {
         for (let callback of this._waitingForLoadSuccess) {
             callback();
         }
+        this._waitingForLoadSuccess = [];
     }
 
     public loadFailed (error : string) : void {
@@ -44,6 +45,7 @@ export abstract class Loadable {
         for (let callback of this._waitingForLoadFail) {
             callback();
         }
+        this._waitingForLoadFail = [];
         throw new Error('Loading failed : ' + error);
     }
 
