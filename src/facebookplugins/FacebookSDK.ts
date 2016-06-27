@@ -1,6 +1,6 @@
-import {EventDispatcher} from "../event/EventDispatcher";
 import {FBResponse} from "./IFBResponse";
 import {Loadable} from "../Loadable";
+import {ScriptTag} from "../library/ScriptTag";
 
 const FB_GRAPH_URI = 'https://graph.facebook.com/';
 const PAGE_ID = '215470341909937';
@@ -26,7 +26,14 @@ export class FacebookSDK extends Loadable {
                 version    : 'v2.6'
             });
             this.loadSuccess();
-        }
+        };
+        (function(d : Document, s : string, id : string){
+            var js : ScriptTag, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = <ScriptTag> d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     }
     
     private static get sdk () : IFacebookSDK {
