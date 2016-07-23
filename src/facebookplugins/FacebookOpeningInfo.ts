@@ -1,8 +1,8 @@
-import {FacebookSDK} from "./FacebookSDK";
 import {FBHoursResponse} from "./IFBResponse";
 import {Loadable} from "../Loadable";
+import {FacebookProxy} from "./FacebookProxy";
 
-export class FBOpeningInfo extends Loadable {
+export class FacebookOpeningInfo extends Loadable {
 
     public monday : string[] = [];
     public tuesday : string[] = [];
@@ -31,7 +31,7 @@ export class FBOpeningInfo extends Loadable {
 
     // Called by super();
     protected doLoad () : void {
-        FacebookSDK.page<FBHoursResponse>(['hours'], (roughdata : FBHoursResponse) => {
+        FacebookProxy.openinghours((roughdata : FBHoursResponse) => {
             if (!roughdata.error) {
                 this.parseData(roughdata);
                 this.loadSuccess();

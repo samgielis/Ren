@@ -1,4 +1,4 @@
-import {FBOpeningInfo} from "../facebookplugins/FBOpeningInfo";
+import {FacebookOpeningInfo} from "../facebookplugins/FacebookOpeningInfo";
 
 const days : string[] = [
     'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'
@@ -14,7 +14,7 @@ const daysTranslation : {[day : string] : string} = {
     'sunday' : 'Zondag'
 };
 
-export function openingInfoView (openingInfo : FBOpeningInfo) : HTMLElement {
+export function openingInfoView (openingInfo : FacebookOpeningInfo) : HTMLElement {
     let root : HTMLElement = document.createElement('div');
     for (let day of days) {
         let dayview = dayView(day, (<any>openingInfo)[day]);
