@@ -10,12 +10,12 @@ export class Ren {
     constructor () {
         this._openingInfo = new FacebookOpeningInfo();
         this._openingInfo.afterLoad(() => {
-            let view = openingInfoView(this._openingInfo);
-            (<HTMLElement>document.querySelector('#ren-openingsuren')).appendChild(view);
+            //let view = openingInfoView(this._openingInfo);
+            //(<HTMLElement>document.querySelector('#ren-openingsuren')).appendChild(view);
         });
         this._feed = new FacebookFeed();
         this._feed.afterLoad(() => {
-            this._feed.renderTo(document.body);
+            //this._feed.renderTo(<HTMLElement>document.querySelector('.ren-background-image'));
         });
     }
 

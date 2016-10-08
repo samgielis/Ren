@@ -1,0 +1,217 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: rgb(108, 150, 177);
+}
+a:hover {
+    color: #56809b;
+}
+
+.ren-white-background {
+    background: rgba(255,255,255,0.9);
+}
+
+.ren-black-background {
+    background: rgba(0,0,0,0.9);
+}
+
+
+/* BACKGROUND IMG*/
+body {
+    background-image: url(../img/ren-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-position-y:  -30px;
+}
+
+.ren-container {
+    height : auto;
+    width: 86.5%;
+    padding-top: 6vh;
+}
+
+/* LOGO */
+.ren-main-logo-img {
+    height: 11vh;
+}
+
+/* MOBILE */
+@media screen and (max-width: 771px) {
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* LOGO */
+    .ren-main-logo-container {
+        padding-bottom: 1.5vh;
+    }
+    .ren-main-logo-img {
+        height: 8vh;
+    }
+}
+@media (min-width: 772px) {
+    .ren-main-logo-container {
+        padding-bottom: 3vh;
+    }
+}
+
+
+
+/* CONTENT */
+.ren-main-content-container {
+    margin-right: 3.33%;
+    margin-left: 3.33%
+}
+@media (min-width: 992px) {
+    .ren-homepage-newsfeed {
+        padding-right: 3.5vw;
+    }
+    .ren-homepage-right {
+        padding-left: 2vw;
+    }
+}
+.ren-homepage-column {
+    padding-top: 7vh;
+    padding-bottom: 3vh;
+}
+.ren-content-item-container {
+    border: 1px solid #898989;
+    padding: 0.4em;
+}
+.ren-content-item-title {
+    font-family: "Open Sans Semibold";
+    text-transform: uppercase;
+    color: rgb(108, 150, 177);
+}
+
+
+/* FORM NIEUWSBRIEF */
+.ren-nieuwsbrief-container {
+    background-color: rgb(108, 150, 177);
+    padding: 1.1em;
+    padding-bottom: 0.5em;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 1.3em;
+}
+.ren-nieuwsbrief-form {
+    border-radius: 0px;
+    border: none;
+    height: 3em;
+}
+.ren-nieuwsbrief-input {
+    display: inline-block;
+    width: 70%;
+    height: 3em;
+}
+.btn-default.ren-nieuwsbrief-btn {
+    width: 30%;
+    height: 3em;
+    vertical-align: top;
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+}
+.btn-default.ren-nieuwsbrief-btn:hover {
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+}
+
+
+
+/* CREDITS */
+.ren-footer {
+    margin-bottom: 10em;
+    color: #9f9f9f;
+}
+.ren-footer>h5 {
+    text-align: center;
+    padding-bottom: 0.1em;
+}
+
+
+
+#ren-open-modal {
+width: 62%;
+height: 62%;
+
+border-radius: 10px;
+border-color: white;
+border-style: solid;
+border-width: 2px;
+
+margin: 0 auto;
+transform: translate(-50%,-50%);
+position: absolute;
+top: 50%;
+left: 50%;
+
+background-color: rgba(0,0,0,0.2);
+
+text-align: center;
+}
+
+.ren-modal-title {
+color: white;
+text-transform: uppercase;
+font-size: 4em;
+font-weight: bold;
+line-height: 1.2em;
+margin: 0.7em 1em 0em 1em;
+}
+
+.ren-modal-infop {
+color: white;
+font-size: 1.2em;
+font-style: italic;
+margin-top: 0.5em;
+}
+
+.ren-modal-logoheader {
+transform: translate(-50%,-50%);
+position: absolute;
+top: -1.5em;
+left: 50%;
+width: 400px;
+}
+
+.ren-modal-cta-wrapper {
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+.ren-modal-btn .material-icons {
+padding-right: 0.5em;
+}
+.ren-modal-cta-call-wrapper {
+float: left;
+width: 50%;
+}
+
+.ren-modal-cta-mail-wrapper {
+float: right;
+width: 50%;
+}
+
+.ren-modal-btn {
+font-style: italic;
+font-weight: 500;
+text-transform: uppercase;
+font-size: 2.2em;
+display: inline-block;
+padding-left: 0.5em;
+padding-right: 0.5em;
+
+background-color: rgba(0,0,0,0.9);
+color: white;
+}
+
+.ren-modal-continue-btn {
+background-color: white;
+color: rgba(0,0,0,0.9)
+}

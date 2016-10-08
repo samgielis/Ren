@@ -2,3 +2,13 @@
     font-family: "SSPIKA";
     src: url('./ss-pika.wof') format('woff');
 }
+
+@font-face {
+    font-family: "Slipstream";
+    src: url('./Slipstream.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Slipstreamttf";
+    src: url('./Slipstream.ttf') format('truetype');
+}
