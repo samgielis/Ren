@@ -10,7 +10,7 @@ a:hover {
 }
 
 .ren-white-background {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.97);
 }
 
 .ren-black-background {
@@ -69,7 +69,7 @@ body {
 }
 @media screen and (min-width: 992px) {
     .ren-homepage-newsfeed {
-        padding-right: 3.5vw;
+        padding-right: 3vw;
     }
     .ren-homepage-right {
         padding-left: 2vw;
