@@ -67,7 +67,7 @@ body {
     margin-right: 3.33%;
     margin-left: 3.33%
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     .ren-homepage-newsfeed {
         padding-right: 3.5vw;
     }
@@ -106,11 +106,11 @@ body {
 }
 .ren-nieuwsbrief-input {
     display: inline-block;
-    width: 70%;
+    width: 60%;
     height: 3em;
 }
 .btn-default.ren-nieuwsbrief-btn {
-    width: 30%;
+    width: 40%;
     height: 3em;
     vertical-align: top;
     background-color: #000000;
@@ -121,8 +121,28 @@ body {
     background-color: rgba(0,0,0,0.9);
     color: white;
 }
-
-
+@media screen and (max-width: 441px) {
+    .ren-container {
+        width: 90%;
+    }
+    .ren-nieuwsbrief-form {
+        font-size: 10px;
+    }
+    .ren-nieuwsbrief-container > p {
+        font-size: 1em;
+    }
+}
+.ren-nieuwsbrief-btn-label-xs {
+    display: none;
+}
+@media screen and (max-width: 335px) {
+    .ren-nieuwsbrief-btn-label-md {
+        display: none;
+    }
+    .ren-nieuwsbrief-btn-label-xs {
+        display: inline;
+    }
+}
 
 /* CREDITS */
 .ren-footer {
