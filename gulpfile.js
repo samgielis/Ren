@@ -22,5 +22,5 @@ gulp.task("default", ["copy-html"], function () {
         .plugin(tsify)
         .bundle()
         .pipe(source('rensport.js'))
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("."));
 });
