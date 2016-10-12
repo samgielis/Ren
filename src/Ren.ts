@@ -15,7 +15,7 @@ export class Ren {
         });
         this._feed = new FacebookFeed();
         this._feed.afterLoad(() => {
-            //this._feed.renderTo(<HTMLElement>document.querySelector('.ren-background-image'));
+            this._feed.renderTo(<HTMLElement>document.querySelector('.ren-homepage-newsfeed'));
         });
     }
 

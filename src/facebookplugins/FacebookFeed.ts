@@ -29,19 +29,21 @@ export class FacebookFeed extends Loadable {
         });
     }
 
-    public get view () : HTMLElement {
-        let view = document.createElement('div');
-        view.className = 'ren-fbfeed';
-        view.style.marginLeft = '1em';
-        view.style.fontFamily = 'Lato, sans-serif'; // 'SSPIKA, verdana, tahoma';
+    public get view () : HTMLElement[] {
+        let view : HTMLElement[] = [];
 
-        for (let post of this.posts) {
-            post.renderTo(view);
+        for (let i = 0; i < Math.min(this.posts.length, 5); i++) {
+            let post = this.posts[i];
+            if (post.canDisplay) {
+                view.push(post.view);
+            }
         }
         return view;
     }
 
     public renderTo (parent : HTMLElement) {
-        parent.appendChild(this.view);
+        for (let postView of this.view) {
+            parent.appendChild(postView);
+        }
     }
 }

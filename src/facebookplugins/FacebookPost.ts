@@ -11,7 +11,7 @@ export class FacebookPost {
     }
 
     public get canDisplay () : boolean {
-        return !this.info.is_hidden && this.info.is_published && this.info.from && this.info.from.id === FB_PAGE_ID;
+        return !this.info.is_hidden && this.info.is_published && this.info.from && this.info.from.id === FB_PAGE_ID && !!this.message;
     }
 
     public get created () : Date {
@@ -30,8 +30,7 @@ export class FacebookPost {
         if (this.info.full_picture) {
             let image = document.createElement('img');
             image.src = this.info.full_picture;
-            image.style.width = '100%';
-            image.style.height = 'auto';
+            image.className = 'ren-newsfeed-item-img';
             return image;
         }
         return null;
@@ -45,22 +44,70 @@ export class FacebookPost {
 
     public get view () : HTMLElement {
         let view = document.createElement('div');
-        view.className = 'ren-fbpost';
-        view.style.width = '500px';
+        view.className = 'ren-newsfeed-item-container';
 
-        let header = document.createElement('div');
-        header.className = 'ren-fbpost-header';
-        header.innerText = this.created.toLocaleDateString();
-
-        let message = document.createElement('p');
-        message.className = 'ren-fbpost-text';
-        message.innerHTML = this.message && linkify(this.message);
-
-        let picture = this.picture;
-
-        if (header) {view.appendChild(header);}
-        if (message) {view.appendChild(message);}
-        if (picture) {view.appendChild(picture);}
+        let dateView = this.createDateView();
+        view.appendChild(dateView);
+        
+        let contentView = this.createContentView();
+        view.appendChild(contentView);
+        
         return view;
     }
+
+    private createContentView () : HTMLElement {
+        let contentContainer : HTMLElement = document.createElement('div');
+        contentContainer.className = 'ren-content-item-container';
+
+        let newsFeedContentContainer : HTMLElement = document.createElement('div');
+        newsFeedContentContainer.className = 'ren-newsfeed-item-content-container';
+
+        if (this.message) {
+            let title = document.createElement('h2');
+            title.className = 'ren-newsfeed-item-title';
+            title.innerHTML = this.message.match(firstSentenceRegex).map(function(s){
+                return s.replace(/^\s+|\s+$/g,'');
+            })[0];
+            newsFeedContentContainer.appendChild(title);
+        }
+        
+        let picture = this.picture;
+        if (picture) {
+            newsFeedContentContainer.appendChild(picture);
+        }
+
+        if (this.message) {
+            let message = document.createElement('p');
+            message.className = 'ren-newsfeed-item-text';
+            message.innerHTML = this.message && linkify(this.message);
+            newsFeedContentContainer.appendChild(message);
+        }
+
+
+        contentContainer.appendChild(newsFeedContentContainer);
+        return contentContainer;
+    }
+
+    private createDateView () : HTMLElement {
+        let dateContainer = document.createElement('div');
+        dateContainer.className = 'ren-newsfeed-item-date-container';
+
+        let dateDayLabel = document.createElement('h1');
+        dateDayLabel.className = 'ren-newsfeed-item-date-day';
+        dateDayLabel.innerText = ''+this.created.getDate();
+        dateContainer.appendChild(dateDayLabel);
+
+        let dateMonthYearLabel = document.createElement('h6');
+        dateMonthYearLabel.className = 'ren-newsfeed-item-date-month-year';
+        dateMonthYearLabel.innerText = months[this.created.getMonth()] + ' ' + this.created.getFullYear();
+        dateContainer.appendChild(dateMonthYearLabel);
+
+        return dateContainer;
+    }
 }
+
+const months : string[] = [
+    'Jan', 'Feb', 'Maa', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dec'
+];
+
+const firstSentenceRegex : RegExp = /^.*?[\.!\?](?:\s|$)/g;
