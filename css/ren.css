@@ -84,7 +84,8 @@ body {
     padding: 0.4em;
 }
 .ren-content-item-title {
-    font-family: "Open Sans Semibold";
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
     color: rgb(108, 150, 177);
 }
@@ -96,7 +97,7 @@ body {
     padding: 1.1em;
     padding-bottom: 0.5em;
     color: white;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     font-size: 1.3em;
 }
 .ren-nieuwsbrief-form {

@@ -10,7 +10,8 @@
 /* TITLE */
 .ren-newsfeed-item-title {
     color: #6c96b1;
-    font-family: "Open Sans Semibold";
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     font-style: italic;
 }
 
@@ -24,7 +25,7 @@
     margin-left: -2.1em;
     background-color: #6c96b1;
     color: white;
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     text-align: center;
 }
 .ren-newsfeed-item-date-day {
@@ -33,7 +34,8 @@
     font-size: 34px;
 }
 .ren-newsfeed-item-date-month-year {
-    font-family: "Open Sans Light";
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
     font-style: italic;
     margin-top: 1px;
     margin-bottom: 0px;
@@ -44,8 +46,8 @@
 .ren-newsfeed-item-text {
     font-size: 1.2em;
     font-style: italic;
-    font-family: "Open Sans Light";
-    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     text-align: justify;
 }
 
