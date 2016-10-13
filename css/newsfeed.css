@@ -17,6 +17,10 @@
 
 
 /* DATE */
+.ren-newsfeed-item-date-container > h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600 !important;
+}
 .ren-newsfeed-item-date-container {
     position: absolute;
     width: 4.2em;
@@ -25,8 +29,7 @@
     margin-left: -2.1em;
     background-color: #6c96b1;
     color: white;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
+
     text-align: center;
 }
 .ren-newsfeed-item-date-day {
