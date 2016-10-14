@@ -38,7 +38,7 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 915px) {
     .navbar-right {
         display: none;
     }
@@ -118,4 +118,19 @@
     .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
         margin: 0;
     }
+}
+
+.ren-navbar-sociallink {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.ren-navbar-sociallink-span-container {
+    padding: .5em;
+    padding-left: 0.8em;
+    border: 1px solid;
+    padding-right: 0.8em;
+}
+
+.ren-navbar-sociallink-span-container:hover {
+    background-color: #56809b;
 }
