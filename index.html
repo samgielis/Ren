@@ -115,11 +115,31 @@
                         <h2 class='ren-content-item-title'>Nieuwsbrief</h2>
                         <div class='ren-nieuwsbrief-container'>
                             <p>Schrijf je nu in op onze nieuwsbrief en blijf op de hoogte van de laatste nieuwe acties, nieuwtjes en producten.</p>
-                            <form>
+                            <form onsubmit="RenSport.subscribeToNewsletter()">
                                 <div class="form-group">
-                                    <input type="email" class="form-control ren-nieuwsbrief-form ren-nieuwsbrief-input" id="exampleInputEmail2" placeholder="voorbeeld@domein.be"><button type="submit" class="btn btn-default ren-nieuwsbrief-form ren-nieuwsbrief-btn"><span class='ren-nieuwsbrief-btn-label-md'>Inschrijven</span><span class='ren-nieuwsbrief-btn-label-xs'>Klaar</span></button>
+                                    <input type="email" class="form-control ren-nieuwsbrief-form ren-nieuwsbrief-input" id="ren-nieuwsbrief-input-field" placeholder="voorbeeld@domein.be"><button type='submit' onclick="console.log(document.querySelector('.ren-nieuwsbrief-input').value);document.querySelector('#vrhiddenform').value = document.querySelector('.ren-nieuwsbrief-input').value"  class="btn btn-default ren-nieuwsbrief-form ren-nieuwsbrief-btn"><span class='ren-nieuwsbrief-btn-label-md'>Inschrijven</span><span class='ren-nieuwsbrief-btn-label-xs'>Klaar</span></button>
                                 </div>
                             </form>
+                            <!-- VR Form (hidden) -->
+                            <form class="vr-signup-form" id="vr-signup-form-17592186045076" style="display: none">
+                                <div class="vr-field">
+                                    <span class="vr-required">*</span>
+                                    <label>Email Address</label>
+                                    <input id="vr-hidden-input-field" type="email" name="email_address" required>
+                                </div>
+                                <div class="vr-submit">
+                                    <div class="vr-notice"></div>
+                                    <input id='vr-hidden-submit-btn' type="submit" value="Sign Up">
+                                </div>
+                            </form>
+                            <link media="all" rel="stylesheet" type="text/css" href="https://vr2.verticalresponse.com/signup_forms/signup_forms.embedded-2.css">
+                            <script type="text/javascript" src="https://vr2.verticalresponse.com/signup_forms/signup_forms.embedded-2.js"></script>
+                            <script type="text/javascript">
+                                if (typeof VR !== "undefined" && typeof VR.SignupForm !== "undefined") {
+                                    new VR.SignupForm({ id: "17592186045076", element: "vr-signup-form-17592186045076", endpoint: "https://vr2.verticalresponse.com/se/"});
+                                }
+                            </script>
+                            <!-- End VR Signup Form -->
                         </div>
                         <h2 class='ren-content-item-title'>Binnenkijken</h2>
                         <div class='ren-content-item-container'>

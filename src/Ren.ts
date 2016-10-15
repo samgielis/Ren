@@ -26,4 +26,15 @@ export class Ren {
     public get openingInfo () : FacebookOpeningInfo {
         return this._openingInfo;
     }
+
+    public subscribeToNewsletter () {
+        let input : HTMLInputElement = <HTMLInputElement>document.querySelector('#ren-nieuwsbrief-input-field');
+        let hiddenInput : HTMLInputElement = <HTMLInputElement>document.querySelector('#vr-hidden-input-field'),
+            hiddenSubmit : HTMLElement = <HTMLElement>document.querySelector('#vr-hidden-submit-btn');
+
+        if (input && input.value && hiddenInput && hiddenSubmit) {
+            hiddenInput.value = input.value;
+            hiddenSubmit.click();
+        }
+    }
 }
