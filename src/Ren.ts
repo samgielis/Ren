@@ -29,7 +29,7 @@ export class Ren {
     private _loadHeader () : void {
         document.addEventListener("DOMContentLoaded", () => {
             let hook = $( "#ren-header" );
-            hook.load( "./components/header.html" );
+            hook.load( "/components/header.html" );
         });
     }
 
