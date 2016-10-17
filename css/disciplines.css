@@ -1,0 +1,34 @@
+.ren-main-content-container {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.ren-content-center {
+    text-align: center;
+}
+.ren-content-item-container {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.ren-tile-img {
+    width: 100%;
+}
+.ren-middle-row > .ren-homepage-column {
+    margin-top: 2vh;
+}
+
+
+h1, h4 {
+    text-transform: uppercase;
+}
+h1 {
+    color: rgb(108, 150, 177);
+    margin-left: 26px;
+    font-size: 3em;
+    font-weight: 500;
+    margin-top: 5vh;
+}
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}

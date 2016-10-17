@@ -75,8 +75,8 @@ body {
     }
 }
 .ren-homepage-column {
-    padding-top: 7vh;
-    padding-bottom: 3vh;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
 }
 .ren-content-item-container {
     border: 1px solid #898989;
