@@ -2,12 +2,15 @@ import {FacebookOpeningInfo} from "./facebookplugins/FacebookOpeningInfo";
 import {openingInfoView} from "./view/OpeningInfoView";
 import {FacebookFeed} from "./facebookplugins/FacebookFeed";
 
+declare var $: any
+
 export class Ren {
 
     private _openingInfo : FacebookOpeningInfo;
     private _feed : FacebookFeed;
 
     constructor () {
+        this._loadHeader();
         this._openingInfo = new FacebookOpeningInfo();
         this._openingInfo.afterLoad(() => {
             //let view = openingInfoView(this._openingInfo);
@@ -21,6 +24,13 @@ export class Ren {
 
     public get feed () {
         return this._feed;
+    }
+
+    private _loadHeader () : void {
+        document.addEventListener("DOMContentLoaded", () => {
+            let hook = $( "#ren-header" );
+            hook.load( "./components/header.html" );
+        });
     }
 
     public get openingInfo () : FacebookOpeningInfo {
