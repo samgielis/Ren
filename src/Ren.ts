@@ -1,8 +1,8 @@
 import {FacebookOpeningInfo} from "./facebookplugins/FacebookOpeningInfo";
-import {openingInfoView} from "./view/OpeningInfoView";
 import {FacebookFeed} from "./facebookplugins/FacebookFeed";
+import {RenSportConfig} from "./RenSportConfig";
 
-declare var $: any
+declare var $: any;
 
 export class Ren {
 
@@ -10,16 +10,26 @@ export class Ren {
     private _feed : FacebookFeed;
 
     constructor () {
-        this._loadHeader();
-        this._openingInfo = new FacebookOpeningInfo();
-        this._openingInfo.afterLoad(() => {
-            //let view = openingInfoView(this._openingInfo);
-            //(<HTMLElement>document.querySelector('#ren-openingsuren')).appendChild(view);
-        });
-        this._feed = new FacebookFeed();
-        this._feed.afterLoad(() => {
-            this._feed.renderTo(<HTMLElement>document.querySelector('.ren-homepage-newsfeed'));
-        });
+        let config : RenSportConfig = (<any>window).RenSportConfig;
+        if (config && config.loadHeader) {
+            this._loadHeader();
+        }
+
+        if (config && config.loadOpeningHours) {
+            this._openingInfo = new FacebookOpeningInfo();
+            this._openingInfo.afterLoad(() => {
+                //let view = openingInfoView(this._openingInfo);
+                //(<HTMLElement>document.querySelector('#ren-openingsuren')).appendChild(view);
+            });
+        }
+
+        if (config && config.loadNewsFeed) {
+            this._feed = new FacebookFeed();
+            this._feed.afterLoad(() => {
+                this._feed.renderTo(<HTMLElement>document.querySelector('.ren-homepage-newsfeed'));
+            });
+        }
+
     }
 
     public get feed () {
