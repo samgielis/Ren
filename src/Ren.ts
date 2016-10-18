@@ -12,7 +12,7 @@ export class Ren {
     constructor () {
         let config : RenSportConfig = (<any>window).RenSportConfig;
         if (config && config.loadHeader) {
-            this._loadHeader();
+            this._loadHeader(config.context);
         }
 
         if (config && config.loadOpeningHours) {
@@ -36,10 +36,14 @@ export class Ren {
         return this._feed;
     }
 
-    private _loadHeader () : void {
+    private _loadHeader (context : string) : void {
         document.addEventListener("DOMContentLoaded", () => {
-            let hook = $( "#ren-header" );
-            hook.load( "/components/header.html" );
+            let hook : any = $( "#ren-header" );
+            hook.load( "/components/header.html",
+                () => {
+                    let contextNavbarElement : HTMLElement = <HTMLElement>document.querySelector('li[data-context-' + context.toLowerCase() + ']');
+                    contextNavbarElement.className += 'active';
+                });
         });
     }
 
