@@ -2,6 +2,8 @@ var gulp = require("gulp");
 var browserify = require("browserify");
 var source = require('vinyl-source-stream');
 var tsify = require("tsify");
+var streamify = require("streamify");
+var uglify = require("gulp-uglify");
 var paths = {
     pages: ['src/*.html']
 };
@@ -11,7 +13,22 @@ gulp.task("copy-html", function () {
         .pipe(gulp.dest("dist"));
 });
 
-gulp.task("default", ["copy-html"], function () {
+gulp.task("release", ["copy-html"], function () {
+    return browserify({
+        basedir: '.',
+        debug: true,
+        entries: ['src/RenGlobal.ts'],
+        cache: {},
+        packageCache: {}
+    })
+        .plugin(tsify)
+        .bundle()
+        .pipe(gulp.src('rensport.js'))
+		.pipe(uglify())
+        .pipe(gulp.dest("."));
+});
+
+gulp.task("debug", ["copy-html"], function () {
     return browserify({
         basedir: '.',
         debug: true,
