@@ -32,10 +32,11 @@ export class FacebookFeed extends Loadable {
     public get view () : HTMLElement[] {
         let view : HTMLElement[] = [];
 
-        for (let i = 0; i < Math.min(this.posts.length, 5); i++) {
+        for (let i = 0, displayingPosts = 0; displayingPosts < Math.min(this.posts.length, 5); i++) {
             let post = this.posts[i];
             if (post.canDisplay) {
                 view.push(post.view);
+                displayingPosts++;
             }
         }
         return view;
