@@ -15,6 +15,8 @@ export class Ren {
             this._loadHeader(config.context);
         }
 
+        this._loadFooter();
+
         if (config && config.loadOpeningHours) {
             this._openingInfo = new FacebookOpeningInfo();
             this._openingInfo.afterLoad(() => {
@@ -44,6 +46,13 @@ export class Ren {
                     let contextNavbarElement : HTMLElement = <HTMLElement>document.querySelector('li[data-context-' + context.toLowerCase() + ']');
                     contextNavbarElement.className += 'active';
                 });
+        });
+    }
+
+    private _loadFooter () : void {
+        document.addEventListener("DOMContentLoaded", () => {
+            let hook : any = $( "#ren-footer" );
+            hook.load( "/components/footer.html");
         });
     }
 

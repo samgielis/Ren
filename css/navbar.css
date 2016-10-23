@@ -24,10 +24,6 @@
     background-color: #56809b;
 }
 
-.navbar {
-    background-color: rgba(0,0,0,0.83);
-}
-
 .nav .open>a, .nav .open>a:focus, .nav .open {
     background-color: #56809b;
 }
