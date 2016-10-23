@@ -8,6 +8,11 @@
 .ren-content-item-container {
     margin-left: 1em;
     margin-right: 1em;
+    cursor: pointer;
+}
+.ren-content-item-container:hover {
+    border: 1px solid #6c96b1;
+    background-color: #6c96b1;
 }
 .ren-tile-img {
     width: 100%;
