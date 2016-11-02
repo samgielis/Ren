@@ -1,6 +1,7 @@
 import {FacebookOpeningInfo} from "./facebookplugins/FacebookOpeningInfo";
 import {FacebookFeed} from "./facebookplugins/FacebookFeed";
 import {RenSportConfig} from "./RenSportConfig";
+import {renderOpeningInfo} from "./view/OpeningInfoView";
 
 declare var $: any;
 
@@ -20,8 +21,7 @@ export class Ren {
         if (config && config.loadOpeningHours) {
             this._openingInfo = new FacebookOpeningInfo();
             this._openingInfo.afterLoad(() => {
-                //let view = openingInfoView(this._openingInfo);
-                //(<HTMLElement>document.querySelector('#ren-openingsuren')).appendChild(view);
+                renderOpeningInfo(this._openingInfo, <HTMLElement>document.querySelector('#ren-openingsuren-hook'));
             });
         }
 
