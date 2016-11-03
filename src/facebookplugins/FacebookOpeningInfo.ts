@@ -1,6 +1,7 @@
 import {FBHoursResponse} from "./IFBResponse";
 import {Loadable} from "../Loadable";
 import {FacebookProxy} from "./FacebookProxy";
+import {parseJSON} from "../util/JSONUtils";
 
 export class FacebookOpeningInfo extends Loadable {
 
@@ -42,6 +43,11 @@ export class FacebookOpeningInfo extends Loadable {
     }
 
     private parseData (roughdata : FBHoursResponse) {
+
+        if (typeof roughdata === 'string') {
+            roughdata = parseJSON(<any>roughdata);
+        }
+        
         this.monday = toTimings(Object.keys(roughdata.hours).filter((openingTime) => {
                 return openingTime.indexOf('mon') > -1;
             }).sort(compareOpeningInfo), roughdata);
