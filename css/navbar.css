@@ -28,21 +28,28 @@
     background-color: #56809b;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 856px) {
     .nav>li>a {
         padding: 1em;
     }
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 1010px) {
     .navbar-right {
         display: none;
     }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 933px) {
     .nav>li>a {
         padding: 1.3em;
+    }
+}
+
+
+@media screen and (min-width: 772px) and (max-width: 856px) {
+    .navbar .navbar-nav>li>a {
+        font-size: 0.8em;
     }
 }
 
