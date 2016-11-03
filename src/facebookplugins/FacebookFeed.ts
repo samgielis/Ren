@@ -2,6 +2,7 @@ import {FBFeedResponseObject} from "./IFBResponse";
 import {Loadable} from "../Loadable";
 import {FacebookProxy} from "./FacebookProxy";
 import {FacebookPost} from "./FacebookPost";
+import {parseJSON} from "../util/JSONUtils";
 
 export class FacebookFeed extends Loadable {
 
@@ -19,14 +20,20 @@ export class FacebookFeed extends Loadable {
     protected doLoad () : void {
         FacebookProxy.feed((res : FBFeedResponseObject) => {
             if (!res.error && res.feed && res.feed.data) {
-                for (let post of res.feed.data){
-                    this._posts.push(new FacebookPost(post));
-                }
-                this.loadSuccess();
+                this.addPostsFromResponse(res)
+            } else if (!res.error && parseJSON(<any>res) && parseJSON(<any>res).feed && parseJSON(<any>res).feed.data) {
+                this.addPostsFromResponse(parseJSON(<any>res));
             } else {
                 this.loadFailed(res.error);
             }
         });
+    }
+
+    private addPostsFromResponse (res : FBFeedResponseObject) : void {
+        for (let post of res.feed.data){
+            this._posts.push(new FacebookPost(post));
+        }
+        this.loadSuccess();
     }
 
     public get view () : HTMLElement[] {
