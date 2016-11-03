@@ -15,7 +15,7 @@ export class FacebookPost {
     }
 
     public get created () : Date {
-        return new Date(this.info.created_time);
+        return new Date(this.info.created_time.split('+')[0]);
     }
 
     public get id () : string {

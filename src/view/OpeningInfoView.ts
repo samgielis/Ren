@@ -15,6 +15,10 @@ const daysTranslation : {[day : string] : string} = {
 };
 
 export function renderOpeningInfo (openingInfo : FacebookOpeningInfo, root : HTMLElement) : void {
+    if (!root) {
+        return;
+    }
+    
     let type = root.getAttribute('data-viewtype');
     switch (type) {
         case 'modest' :
