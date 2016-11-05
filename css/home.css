@@ -9,8 +9,8 @@
     background-image: url('http://vd3653.web35.level27.be/wp-content/uploads/2016/01/Top-5-Best-Running-Shoes-for-Women-in-2015.jpg');
     background-position-x: 50%;
     background-position-y: 50%;
-    background-size: cover;
-    transition: background-size 0.2s;
+    background-size: 100%;
+    transition: background-size 0.666s;
 
     padding-bottom: 4%;
     padding-top: 2%;
@@ -21,9 +21,9 @@
 
 .ren-cta-actiemaand:hover {
     color: white;
-    background-size: 110%;
+    background-size: 109.999%;
     text-decoration: none;
-    transition: background-size 0.2s;
+    transition: background-size 0.666s;
 }
 
 
@@ -31,6 +31,9 @@
     font-size: 10vh;
 }
 @media screen and (max-width: 584px) {
+    .ren-cta-actiemaand {
+        background-size: cover;
+    }
     .ren-cta-actiemaand-title {
         font-size: 9vh;
     }
