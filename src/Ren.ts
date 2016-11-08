@@ -44,7 +44,9 @@ export class Ren {
             hook.load( "/components/header.html",
                 () => {
                     let contextNavbarElement : HTMLElement = <HTMLElement>document.querySelector('li[data-context-' + context.toLowerCase() + ']');
-                    contextNavbarElement.className += 'active';
+                    if (contextNavbarElement) {
+                        contextNavbarElement.className += 'active';
+                    }
                 });
         });
     }
