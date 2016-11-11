@@ -41,3 +41,17 @@ gulp.task("debug", ["copy-html"], function () {
         .pipe(source('rensport.js'))
         .pipe(gulp.dest("."));
 });
+
+gulp.task("logosearch:debug", ["copy-html"], function () {
+    return browserify({
+        basedir: '.',
+        debug: true,
+        entries: ['src/logosearch/LogoSearch.ts'],
+        cache: {},
+        packageCache: {}
+    })
+        .plugin(tsify)
+        .bundle()
+        .pipe(source('logosearch.js'))
+        .pipe(gulp.dest("."));
+});
