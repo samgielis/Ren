@@ -3,6 +3,7 @@
     "src/RenGlobal.ts"
   ],
   "compilerOptions": {
+    "suppressImplicitAnyIndexErrors" : true,
     "noImplicitAny": true,
     "target": "es5"
   }
