@@ -31,7 +31,6 @@ export class Ren {
                 this._feed.renderTo(<HTMLElement>document.querySelector('.ren-homepage-newsfeed'));
             });
         }
-
     }
 
     public get feed () {
