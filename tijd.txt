@@ -8,3 +8,6 @@
 2u (merken, design)
 3u (CTA, design)
 3u (merken, code, afbeeldingen)
+4u (merken, zoekalgo)
+1.5u (merken, dataset)
+1u (debug titel)
