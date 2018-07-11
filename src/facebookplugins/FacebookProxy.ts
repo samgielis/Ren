@@ -21,17 +21,24 @@ export class FacebookProxy {
     }
     
     private static get (url : string, succ : (info : FBResponse) => void, fail? : () => void) : void {
-        var xhr = new XMLHttpRequest();
-        xhr.open('get', proxyURL + url, true);
-        xhr.responseType = 'json';
-        xhr.onload = function() {
-            var status = xhr.status;
-            if (status == 200) {
-                succ(xhr.response);
-            } else if(fail) {
+        try {
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', proxyURL + url, true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+                var status = xhr.status;
+                if (status == 200) {
+                    succ(xhr.response);
+                } else if(fail) {
+                    fail();
+                }
+            };
+            xhr.onerror = fail;
+            xhr.send();
+        } catch (e) {
+            if(fail) {
                 fail();
             }
-        };
-        xhr.send();
+        }
     }
 }

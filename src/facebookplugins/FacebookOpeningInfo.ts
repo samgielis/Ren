@@ -13,10 +13,6 @@ export class FacebookOpeningInfo extends Loadable {
     public saturday : string[] = [];
     public sunday : string[] = [];
 
-    constructor () {
-        super();
-    }
-
     public get isCurrentlyOpen () : boolean {
         let now : Date = new Date(),
             day = jsValueToDay(now.getDay()),
@@ -39,6 +35,32 @@ export class FacebookOpeningInfo extends Loadable {
             } else {
                 this.loadFailed(roughdata.error);
             }
+        }, () => {
+            this.parseData(<any>{
+                hours: {
+                    "mon_1": "09:30",
+                    "mon_2": "12:30",
+                    "mon_3": "13:30",
+                    "mon_4": "18:30",
+                    "wed_1": "09:30",
+                    "wed_2": "12:30",
+                    "wed_3": "13:30",
+                    "wed_4": "18:30",
+                    "thu_1": "09:30",
+                    "thu_2": "12:30",
+                    "thu_3": "13:30",
+                    "thu_4": "18:30",
+                    "fri_1": "09:30",
+                    "fri_2": "12:30",
+                    "fri_3": "13:30",
+                    "fri_4": "19:00",
+                    "sat_1": "09:30",
+                    "sat_2": "12:30",
+                    "sat_3": "13:30",
+                    "sat_4": "18:30"
+                }
+            });
+            this.loadSuccess();
         });
     }
 
