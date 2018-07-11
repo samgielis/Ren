@@ -11,5 +11,7 @@
 4u (merken, zoekalgo)
 1.5u (merken, dataset)
 1u (debug titel)
-5u (opnieuw opstarten, server starten, fb application)
+
+5u (opnieuw opstarten, server starten, fb application, privacy policy)
 2u (Google Analytics toevoegen)
+1u (fallback voor openingsuren)
