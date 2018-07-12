@@ -17,3 +17,4 @@
 1u (fallback voor openingsuren)
 0.5u (nieuwsbrief updaten)
 1u (manuele posts)
+0.5u (sportvoeding aanpassen en brands updaten)
