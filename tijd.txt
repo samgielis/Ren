@@ -16,3 +16,4 @@
 2u (Google Analytics toevoegen)
 1u (fallback voor openingsuren)
 0.5u (nieuwsbrief updaten)
+1u (manuele posts)
