@@ -123,13 +123,16 @@ body {
 }
 @media screen and (max-width: 441px) {
     .ren-container {
-        width: 90%;
+        width: 95%;
     }
     .ren-nieuwsbrief-form {
         font-size: 10px;
     }
     .ren-nieuwsbrief-container > p {
         font-size: 1em;
+    }
+    .ren-homepage-column {
+        padding: 0 10px
     }
 }
 .ren-nieuwsbrief-btn-label-xs {
