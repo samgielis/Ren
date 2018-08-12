@@ -2,6 +2,7 @@ import {FBHoursResponse} from "./IFBResponse";
 import {Loadable} from "../Loadable";
 import {FacebookProxy} from "./FacebookProxy";
 import {parseJSON} from "../util/JSONUtils";
+import {EXCEPTIONAL_OPENING_HOURS} from "./ManualOpeningHours";
 
 export class FacebookOpeningInfo extends Loadable {
 
@@ -36,30 +37,7 @@ export class FacebookOpeningInfo extends Loadable {
                 this.loadFailed(roughdata.error);
             }
         }, () => {
-            this.parseData(<any>{
-                hours: {
-                    "mon_1": "09:30",
-                    "mon_2": "12:30",
-                    "mon_3": "13:30",
-                    "mon_4": "18:30",
-                    "wed_1": "09:30",
-                    "wed_2": "12:30",
-                    "wed_3": "13:30",
-                    "wed_4": "18:30",
-                    "thu_1": "09:30",
-                    "thu_2": "12:30",
-                    "thu_3": "13:30",
-                    "thu_4": "18:30",
-                    "fri_1": "09:30",
-                    "fri_2": "12:30",
-                    "fri_3": "13:30",
-                    "fri_4": "19:00",
-                    "sat_1": "09:30",
-                    "sat_2": "12:30",
-                    "sat_3": "13:30",
-                    "sat_4": "18:30"
-                }
-            });
+            this.parseData(<any>EXCEPTIONAL_OPENING_HOURS);
             this.loadSuccess();
         });
     }
