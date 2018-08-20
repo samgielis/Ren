@@ -3,6 +3,11 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'NU bij Ren Sport. De nieuwe Mizuno Wave Ultima 10 – TCS Amsterdam Marathon editie.',
+        '2018/08/17',
+        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/39453905_788052064651759_7870217907072925696_n.jpg?_nc_cat=0&oh=d1ab8ff26008f21e252b76e9ac48eaac&oe=5C062056'
+    ),
+    manualFacebookPostImport(
         'Beste klanten, maandag 13, dinsdag 14 en woensdag 15 augustus zijn we gesloten. Donderdag zijn we terug open. Geniet van jullie mooi en sportief weekend.🌞🌞🏃‍♂️🏃‍♀️🎾🏊‍♂️🚴‍♂️🚴‍♀️. 😜',
         '2018/08/11',
         'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/38926265_780068562116776_8787499153425956864_n.jpg?_nc_cat=0&oh=3187f9fc009fec9145c028a6e2bf6567&oe=5C0DB9D9'
@@ -29,12 +34,6 @@ export const manualFacebookFeed: FBPostResponse[] = [
         'Messalina Pieroni, mooi artikel en mooi foto’s.',
         '2018/07/03',
         'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/36531094_733435116780121_1939821811734675456_n.jpg?_nc_cat=0&oh=6c7b5314822dc943f8b86f67cf4877e7&oe=5BDE4FA3'
-    ),
-    manualFacebookPostImport(
-        'Koopjes!!!!!! \n' +
-        'Wil je goed sportgerief, bij Ren Sport moet je zijn.',
-        '2018/07/01',
-        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/36520563_731171860339780_8226576463223062528_o.jpg?_nc_cat=0&oh=22fdde6b44c6e953588ca729f300d1da&oe=5BEBBB84'
     )
 ];
 
