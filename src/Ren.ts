@@ -4,6 +4,7 @@ import {RenSportConfig} from "./RenSportConfig";
 import {renderOpeningInfo} from "./view/OpeningInfoView";
 
 declare var $: any;
+declare var ga: any;
 
 export class Ren {
 
@@ -66,7 +67,24 @@ export class Ren {
         let hiddenInput : HTMLInputElement = <HTMLInputElement>document.querySelector('#vr-hidden-input-field'),
             hiddenSubmit : HTMLElement = <HTMLElement>document.querySelector('#vr-hidden-submit-btn');
 
-        if (input && input.value && hiddenInput && hiddenSubmit) {
+        if (!input || !hiddenInput) {
+            return;
+        }
+
+        if (ga){
+            try{
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'Newsletter',
+                    eventAction: 'submit',
+                    eventLabel: input.value
+                });
+            } catch (e) {
+                console.warn('REN: Er ging iets verkeerd bij het tracken van de Newsletter description.')
+            }
+        }
+
+        if (input.value && hiddenSubmit) {
             hiddenInput.value = input.value;
             hiddenSubmit.click();
         }
