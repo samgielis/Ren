@@ -22,6 +22,7 @@
 1u (tracking; update; add barbaric to logos)
 .5u (barbaric poster homepage)
 .5u tekst updaten
-1u pagina maken
+1u pagina maken barbaric
+1u pagina maken mizuno
 
-74.5
+75.5
