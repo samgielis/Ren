@@ -6,7 +6,8 @@
     text-shadow: 1px 1px 15px #303030;
     color:  white;
 
-    background-image: url('https://augustjuly.com/wp-content/uploads/2018/01/winkelen-uitverkoop-belgie.jpg');
+    /* SOLDEN - background-image: url('https://augustjuly.com/wp-content/uploads/2018/01/winkelen-uitverkoop-belgie.jpg');*/
+    background-image: url('/merken/mizuno/wave-ultima-10/amsterdam.jpg');
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: 100%;
