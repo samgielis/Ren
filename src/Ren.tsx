@@ -5,6 +5,7 @@ import {renderOpeningInfo} from "./view/OpeningInfoView";
 import {PageHeader} from "./components/PageHeader/PageHeader";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import {PageFooter} from "./components/PageFooter";
 
 declare var $: any;
 declare var ga: any;
@@ -52,8 +53,10 @@ export class Ren {
 
     private _loadFooter(): void {
         document.addEventListener("DOMContentLoaded", () => {
-            let hook: any = $("#ren-footer");
-            hook.load("/components/footer.html");
+            ReactDOM.render(
+                <PageFooter />,
+                document.getElementById("ren-footer")
+            );
         });
     }
 
