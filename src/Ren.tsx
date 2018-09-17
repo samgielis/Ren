@@ -2,17 +2,20 @@ import {FacebookOpeningInfo} from "./facebookplugins/FacebookOpeningInfo";
 import {FacebookFeed} from "./facebookplugins/FacebookFeed";
 import {RenSportConfig} from "./RenSportConfig";
 import {renderOpeningInfo} from "./view/OpeningInfoView";
+import {PageHeader} from "./components/PageHeader/PageHeader";
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 declare var $: any;
 declare var ga: any;
 
 export class Ren {
 
-    private _openingInfo : FacebookOpeningInfo;
-    private _feed : FacebookFeed;
+    private _openingInfo: FacebookOpeningInfo;
+    private _feed: FacebookFeed;
 
-    constructor () {
-        let config : RenSportConfig = (<any>window).RenSportConfig;
+    constructor() {
+        let config: RenSportConfig = (window as any).RenSportConfig;
         if (config && config.loadHeader) {
             this._loadHeader(config.context);
         }
@@ -22,50 +25,46 @@ export class Ren {
         if (config && config.loadOpeningHours) {
             this._openingInfo = new FacebookOpeningInfo();
             this._openingInfo.afterLoad(() => {
-                renderOpeningInfo(this._openingInfo, <HTMLElement>document.querySelector('#ren-openingsuren-hook'));
+                renderOpeningInfo(this._openingInfo, document.querySelector('#ren-openingsuren-hook') as HTMLElement);
             });
         }
 
         if (config && config.loadNewsFeed) {
             this._feed = new FacebookFeed();
             this._feed.afterLoad(() => {
-                this._feed.renderTo(<HTMLElement>document.querySelector('.ren-homepage-newsfeed'));
+                this._feed.renderTo(document.querySelector('.ren-homepage-newsfeed') as HTMLElement);
             });
         }
     }
 
-    public get feed () {
+    public get feed() {
         return this._feed;
     }
 
-    private _loadHeader (context : string) : void {
+    private _loadHeader(context: string): void {
         document.addEventListener("DOMContentLoaded", () => {
-            let hook : any = $( "#ren-header" );
-            hook.load( "/components/header.html",
-                () => {
-                    let contextNavbarElement : HTMLElement = <HTMLElement>document.querySelector('li[data-context-' + context.toLowerCase() + ']');
-                    if (contextNavbarElement) {
-                        contextNavbarElement.className += 'active';
-                    }
-                });
+            ReactDOM.render(
+                <PageHeader activeContext={context}/>,
+                document.getElementById("ren-header")
+            );
         });
     }
 
-    private _loadFooter () : void {
+    private _loadFooter(): void {
         document.addEventListener("DOMContentLoaded", () => {
-            let hook : any = $( "#ren-footer" );
-            hook.load( "/components/footer.html");
+            let hook: any = $("#ren-footer");
+            hook.load("/components/footer.html");
         });
     }
 
-    public get openingInfo () : FacebookOpeningInfo {
+    public get openingInfo(): FacebookOpeningInfo {
         return this._openingInfo;
     }
 
-    public subscribeToNewsletter () {
-        let input : HTMLInputElement = <HTMLInputElement>document.querySelector('#ren-nieuwsbrief-input-field');
-        let hiddenInput : HTMLInputElement = <HTMLInputElement>document.querySelector('#vr-hidden-input-field'),
-            hiddenSubmit : HTMLElement = <HTMLElement>document.querySelector('#vr-hidden-submit-btn');
+    public subscribeToNewsletter() {
+        let input: HTMLInputElement = document.querySelector('#ren-nieuwsbrief-input-field') as HTMLInputElement;
+        let hiddenInput: HTMLInputElement = document.querySelector('#vr-hidden-input-field') as HTMLInputElement,
+            hiddenSubmit: HTMLElement = document.querySelector('#vr-hidden-submit-btn') as HTMLElement;
 
         if (!input || !hiddenInput || !input.value || !hiddenSubmit) {
             return;
@@ -78,11 +77,11 @@ export class Ren {
     }
 
     private _trackSubscription(email: string): void {
-        if (!ga){
+        if (!ga) {
             return;
         }
 
-        try{
+        try {
             ga('send', {
                 hitType: 'event',
                 eventCategory: 'Newsletter',
