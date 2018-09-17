@@ -14,7 +14,7 @@ export class Navbar extends React.Component<NavbarProps, {}> {
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav">
                         <NavbarEntry
-                            title='Home' link='/home'
+                            title='Home' link='/'
                             active={this.props.activeContext === 'home'}
                         />
                         <NavbarEntry
