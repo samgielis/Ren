@@ -1,3 +1,8 @@
+import {IIndexStrategy} from "./index-strategy/index-strategy";
+import {ISanitizer} from "./sanitizer/sanitizer";
+import {PrefixIndexStrategy} from "./index-strategy/prefix-index-strategy";
+import {LowerCaseSanitizer} from "./sanitizer/lower-case-sanitizer";
+
 module JsSearch {
   /**
    * This utility highlights the occurrences of tokens within a string of text. It can be used to give visual indicators
@@ -19,8 +24,8 @@ module JsSearch {
      * @param opt_wrapperTagName Optional wrapper tag name; defaults to 'mark' (e.g. <mark>)
      */
     constructor(opt_indexStrategy:IIndexStrategy, opt_sanitizer:ISanitizer, opt_wrapperTagName:string) {
-      this.indexStrategy_ = opt_indexStrategy || new JsSearch.PrefixIndexStrategy();
-      this.sanitizer_ = opt_sanitizer || new JsSearch.LowerCaseSanitizer();
+      this.indexStrategy_ = opt_indexStrategy || new PrefixIndexStrategy();
+      this.sanitizer_ = opt_sanitizer || new LowerCaseSanitizer();
       this.wrapperTagName_ = opt_wrapperTagName || 'mark';
     }
 

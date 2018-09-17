@@ -1,5 +1,7 @@
 /// <reference path="tokenizer.ts" />
 
+import {ITokenizer} from "./tokenizer";
+
 module JsSearch {
 
   /**

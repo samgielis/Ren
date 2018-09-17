@@ -1,5 +1,7 @@
 /// <reference path="index-strategy.ts" />
 
+import {IIndexStrategy} from "./index-strategy";
+
 module JsSearch {
 
   /**

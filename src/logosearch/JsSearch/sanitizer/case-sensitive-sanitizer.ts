@@ -1,5 +1,7 @@
 /// <reference path="sanitizer.ts" />
 
+import {ISanitizer} from "./sanitizer";
+
 module JsSearch {
 
   /**

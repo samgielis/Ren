@@ -1,5 +1,7 @@
 /// <reference path="search-index.ts" />
 
+import {ISearchIndex} from "./search-index";
+
 module JsSearch {
 
   /**
