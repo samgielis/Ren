@@ -2,16 +2,19 @@ import {FacebookOpeningInfo} from "./facebookplugins/FacebookOpeningInfo";
 import {FacebookFeed} from "./facebookplugins/FacebookFeed";
 import {RenSportConfig} from "./RenSportConfig";
 import {renderOpeningInfo} from "./view/OpeningInfoView";
+import {AnalyticsTracker, createAnalyticsTracker} from "./analytics/AnalyticsTracker";
+import {GoogleAnalyticsTracker} from "./analytics/GoogleAnalyticsTracker";
 
 declare var $: any;
-declare var ga: any;
 
 export class Ren {
 
     private _openingInfo : FacebookOpeningInfo;
     private _feed : FacebookFeed;
+    private _analyticsTracker: AnalyticsTracker;
 
     constructor () {
+        this._analyticsTracker = createAnalyticsTracker();
         let config : RenSportConfig = (<any>window).RenSportConfig;
         if (config && config.loadHeader) {
             this._loadHeader(config.context);
@@ -71,26 +74,9 @@ export class Ren {
             return;
         }
 
-        this._trackSubscription(input.value);
+        this._analyticsTracker.trackSubscription(input.value);
 
         hiddenInput.value = input.value;
         hiddenSubmit.click();
-    }
-
-    private _trackSubscription(email: string): void {
-        if (!ga){
-            return;
-        }
-
-        try{
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'Newsletter',
-                eventAction: 'submit',
-                eventLabel: email
-            });
-        } catch (e) {
-            console.warn('REN: Er ging iets verkeerd bij het tracken van de Newsletter subscription.')
-        }
     }
 }
