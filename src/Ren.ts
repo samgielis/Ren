@@ -4,6 +4,7 @@ import {RenSportConfig} from "./RenSportConfig";
 import {renderOpeningInfo} from "./view/OpeningInfoView";
 import {AnalyticsTracker, createAnalyticsTracker} from "./analytics/AnalyticsTracker";
 import {GoogleAnalyticsTracker} from "./analytics/GoogleAnalyticsTracker";
+import {NewsletterSubscriptionFormController} from "./NewsletterSubscriptionFormController";
 
 declare var $: any;
 
@@ -15,6 +16,8 @@ export class Ren {
 
     constructor () {
         this._analyticsTracker = createAnalyticsTracker();
+        new NewsletterSubscriptionFormController(this._analyticsTracker);
+
         let config : RenSportConfig = (<any>window).RenSportConfig;
         if (config && config.loadHeader) {
             this._loadHeader(config.context);
@@ -63,20 +66,5 @@ export class Ren {
 
     public get openingInfo () : FacebookOpeningInfo {
         return this._openingInfo;
-    }
-
-    public subscribeToNewsletter () {
-        let input : HTMLInputElement = <HTMLInputElement>document.querySelector('#ren-nieuwsbrief-input-field');
-        let hiddenInput : HTMLInputElement = <HTMLInputElement>document.querySelector('#vr-hidden-input-field'),
-            hiddenSubmit : HTMLElement = <HTMLElement>document.querySelector('#vr-hidden-submit-btn');
-
-        if (!input || !hiddenInput || !input.value || !hiddenSubmit) {
-            return;
-        }
-
-        this._analyticsTracker.trackSubscription(input.value);
-
-        hiddenInput.value = input.value;
-        hiddenSubmit.click();
     }
 }
