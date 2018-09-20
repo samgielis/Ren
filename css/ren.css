@@ -98,6 +98,11 @@ body {
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3em;
+    transition: background-color .35s;
+}
+.ren-nieuwsbrief-container.ren-nieuwsbrief-subscribed {
+    background-color: #6fbb67
+
 }
 .ren-nieuwsbrief-form {
     border-radius: 0px;

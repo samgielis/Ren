@@ -6,17 +6,22 @@ import {PageHeader} from "./components/PageHeader/PageHeader";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {PageFooter} from "./components/PageFooter";
+import {AnalyticsTracker, createAnalyticsTracker} from "./analytics/AnalyticsTracker";
+import {NewsletterSubscriptionFormController} from "./NewsletterSubscriptionFormController";
 
 declare var $: any;
-declare var ga: any;
 
 export class Ren {
 
     private _openingInfo: FacebookOpeningInfo;
     private _feed: FacebookFeed;
+    private _analyticsTracker: AnalyticsTracker;
 
     constructor() {
+        this._analyticsTracker = createAnalyticsTracker();
+        new NewsletterSubscriptionFormController(this._analyticsTracker);
         let config: RenSportConfig = (window as any).RenSportConfig;
+
         if (config && config.loadHeader) {
             this._loadHeader(config.context);
         }
@@ -54,7 +59,7 @@ export class Ren {
     private _loadFooter(): void {
         document.addEventListener("DOMContentLoaded", () => {
             ReactDOM.render(
-                <PageFooter />,
+                <PageFooter/>,
                 document.getElementById("ren-footer")
             );
         });
@@ -62,37 +67,5 @@ export class Ren {
 
     public get openingInfo(): FacebookOpeningInfo {
         return this._openingInfo;
-    }
-
-    public subscribeToNewsletter() {
-        let input: HTMLInputElement = document.querySelector('#ren-nieuwsbrief-input-field') as HTMLInputElement;
-        let hiddenInput: HTMLInputElement = document.querySelector('#vr-hidden-input-field') as HTMLInputElement,
-            hiddenSubmit: HTMLElement = document.querySelector('#vr-hidden-submit-btn') as HTMLElement;
-
-        if (!input || !hiddenInput || !input.value || !hiddenSubmit) {
-            return;
-        }
-
-        this._trackSubscription(input.value);
-
-        hiddenInput.value = input.value;
-        hiddenSubmit.click();
-    }
-
-    private _trackSubscription(email: string): void {
-        if (!ga) {
-            return;
-        }
-
-        try {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'Newsletter',
-                eventAction: 'submit',
-                eventLabel: email
-            });
-        } catch (e) {
-            console.warn('REN: Er ging iets verkeerd bij het tracken van de Newsletter subscription.')
-        }
     }
 }

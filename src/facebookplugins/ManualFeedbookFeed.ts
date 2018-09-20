@@ -3,6 +3,11 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Nieuw bij Ren Sport: Padel!',
+        '2018/09/16',
+        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/42092155_815230038600628_3539549451339169792_n.jpg?_nc_cat=101&oh=bd3fe2cb3c0a2a8b3f0712d82ca3b9c0&oe=5C21744E'
+    ),
+    manualFacebookPostImport(
         'Nog snel één van de 200 gelimiteerde SUPERTRAC ULTRA RC schoenen in de wacht slepen? Ren Sport helpt je graag verder.',
         '2018/08/24',
         'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/39947224_796705753786390_8040626648711692288_n.png?_nc_cat=0&oh=24179afae6f3d200279e827d1ac6196a&oe=5C30AD21'
