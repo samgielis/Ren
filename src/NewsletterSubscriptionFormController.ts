@@ -20,7 +20,7 @@ export class NewsletterSubscriptionFormController {
     }
 
     private _initForm() {
-        if (!VR || !VR.SignupForm) {
+        if (!(window as any).VR || !VR.SignupForm) {
             return;
         }
 
