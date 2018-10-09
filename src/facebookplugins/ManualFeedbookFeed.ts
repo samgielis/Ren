@@ -3,6 +3,11 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Ren Sport wordt 30 jaar in november. Het wordt een feest, we houden u op de hoogte.',
+        '2018/09/29',
+        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/42622440_825187714271527_7484433237192736768_n.jpg?_nc_cat=101&oh=60df80c73b86f2c634db964e3dcf84a8&oe=5C5BE254'
+    ),
+    manualFacebookPostImport(
         'Nieuw bij Ren Sport: Padel!',
         '2018/09/16',
         'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/42092155_815230038600628_3539549451339169792_n.jpg?_nc_cat=101&oh=bd3fe2cb3c0a2a8b3f0712d82ca3b9c0&oe=5C21744E'
