@@ -28,6 +28,12 @@ export class Navbar extends React.Component<NavbarProps, {}> {
                             active={this.props.activeContext === 'merken'}
                         />
                         <NavbarEntry
+                            title='30 jaar' link='/30-jaar/ontbijtloop-3-november'
+                            tooltip='Ren bestaat 30 jaar! Ontdek onze acties'
+                            active={this.props.activeContext === '30-jaar'}
+                            emphasis={true}
+                        />
+                        <NavbarEntry
                             title='Contact' link='/contact'
                             tooltip='Contacteer ons'
                             active={this.props.activeContext === 'contact'}
@@ -57,10 +63,17 @@ export interface NavbarEntryProps {
     link: string
     title: string
     active: boolean
+    emphasis?: boolean
     tooltip?: string
 }
 
 class NavbarEntry extends React.Component<NavbarEntryProps, {}> {
+    get className(): string {
+        const activeClassName = this.props.active ? 'active' : '';
+        const emphasisClassName = this.props.emphasis ? 'emphasis' : '';
+        return `${activeClassName} ${emphasisClassName}`
+    }
+
     renderLinkWithOutTooltip () {
         return <a href={this.props.link}>{this.props.title}</a>;
     }
@@ -70,7 +83,7 @@ class NavbarEntry extends React.Component<NavbarEntryProps, {}> {
     }
 
     render() {
-        return <li className={this.props.active ? 'active' : ''}>
+        return <li className={this.className}>
             {
                 this.props.tooltip ? this.renderLinkWithTooltip() : this.renderLinkWithOutTooltip()
             }

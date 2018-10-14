@@ -137,3 +137,8 @@
 .ren-navbar-sociallink-span-container:hover {
     background-color: #56809b;
 }
+
+.navbar .emphasis {
+    font-style: oblique;
+    font-weight: 400;
+}
