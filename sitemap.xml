@@ -36,6 +36,26 @@
     <url>
         <loc>https://rensport.be/contact/</loc>
         <lastmod>2018-09-04T19:00:10+00:00</lastmod>
-        <priority>0.80</priority>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://rensport.be/30-jaar/</loc>
+        <lastmod>2018-10-16T19:00:10+00:00</lastmod>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>https://rensport.be/30-jaar/ontbijtloop-3-november</loc>
+        <lastmod>2018-10-16T19:00:10+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://rensport.be/30-jaar/infoavond-16-november</loc>
+        <lastmod>2018-10-16T19:00:10+00:00</lastmod>
+        <priority>0.70</priority>
+    </url>
+    <url>
+        <loc>https://rensport.be/30-jaar/initiatie-padel-18-november</loc>
+        <lastmod>2018-10-16T19:00:10+00:00</lastmod>
+        <priority>0.70</priority>
     </url>
 </urlset>
