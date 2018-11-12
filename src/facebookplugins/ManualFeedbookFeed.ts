@@ -3,6 +3,32 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Wedstrijd week 2. Van maandag 12/11/218 tot zaterdag, 17/11/2018. Zondag wordt de winnaar gekozen.\n' +
+        'De prijsvraag is. \n' +
+        'Plaats de onderstaande merken in de juiste volgorde van start van onze running kleding tot de huidige tijd.\n' +
+        '- GORE RUNNING WEAR\n' +
+        '- CONCURVE\n' +
+        '- GORE® Wear\n' +
+        'Uit alle inzendingen verloten wij een winnaar. Er zijn twee winnaars, 1 man en 1 vrouw. Goretex vesten, 1 herenvest en 1 damesvest. Wij verwittigen de gelukkige. \n' +
+        'Volg ons op Facebook zo blijf je op de hoogte van onze acties.\n' +
+        'Deel en like mag altijd.\n' +
+        '#rensport #gore',
+        '2018/11/12',
+        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/46146766_867468263376805_6607802357352759296_n.jpg?_nc_cat=104&_nc_ht=scontent-bru2-1.xx&oh=e3769e057b1f3eeb47c1b69b86d4cf44&oe=5C3CF85B'
+    ),
+    manualFacebookPostImport(
+        'Nu te verkrijgen bij Ren Sport.',
+        '2018/11/07',
+        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/45088658_2001600013270094_5049284284708290560_n.jpg?_nc_cat=107&_nc_ht=scontent-bru2-1.xx&oh=107a0165d84f05a0eeff77ede96b2a33&oe=5C790729'
+    ),
+    manualFacebookPostImport(
+        'Wedstrijd week 1. Van maandag 5/11/218 tot zaterdag, 10/11/2018. Zaterdag wordt de winnaar gekozen.\n' +
+        'Maak een leuke Saucony foto en post deze hier op de Ren Sport Facebook , uit alle inzendingen verloten wij een winnaar. De prijs is één paar Saucony schoenen, maat en model zelf te kiezen. Wij verwittigen de gelukkige. \n' +
+        'Volg ons op Facebook zo blijf je op de hoogte van onze acties.',
+        '2018/11/05',
+        ''
+    ),
+    manualFacebookPostImport(
         'Ren Sport wordt 30 jaar in november. Het wordt een feest, we houden u op de hoogte.',
         '2018/09/29',
         'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/42622440_825187714271527_7484433237192736768_n.jpg?_nc_cat=101&oh=60df80c73b86f2c634db964e3dcf84a8&oe=5C5BE254'
