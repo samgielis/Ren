@@ -15,7 +15,7 @@ export const STANDARD_OPENING_HOURS = {
         "fri_1": "09:30",
         "fri_2": "12:30",
         "fri_3": "13:30",
-        "fri_4": "19:00",
+        "fri_4": "18:00",
         "sat_1": "09:30",
         "sat_2": "18:00"
     }
