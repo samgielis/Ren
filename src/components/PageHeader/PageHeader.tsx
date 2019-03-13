@@ -14,7 +14,7 @@ class MainLogo extends React.Component {
     render() {
         return <div className="row ren-main-logo-container">
             <div className="col-md-12">
-                <img className='ren-main-logo-img' src='/img/30-jaar.png'/>
+                <img className='ren-main-logo-img' src='/img/logo.png'/>
             </div>
         </div>
     }
