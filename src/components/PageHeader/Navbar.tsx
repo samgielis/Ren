@@ -28,9 +28,9 @@ export class Navbar extends React.Component<NavbarProps, {}> {
                             active={this.props.activeContext === 'merken'}
                         />
                         <NavbarEntry
-                            title='30 jaar' link='/30-jaar'
-                            tooltip='Ren bestaat 30 jaar! Ontdek onze acties'
-                            active={this.props.activeContext === '30-jaar'}
+                            title='Outlet shop' link='//shop.rensport.be'
+                            tooltip='Ontdek onze nieuwe Online Outlet Shop'
+                            active={this.props.activeContext === 'shop'}
                             emphasis={true}
                         />
                         <NavbarEntry
