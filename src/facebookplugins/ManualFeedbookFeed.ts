@@ -3,6 +3,11 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Marathon ready met de Polar Vantage M. De Vantage M limited edition is vanaf nu bij ons te verkrijgen. Je ontvangt een gratis polsband bij je aankoop.',
+        '2019/03/20',
+        '/img/vantagem.png'
+    ),
+    manualFacebookPostImport(
         'Onze Online Outlet Shop opent binnenkort! Ontdek meer op shop.rensport.be',
         '2019/03/15',
         '/img/shop_preview.PNG'
