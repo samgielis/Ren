@@ -3,8 +3,22 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'NIEUW: Bezoek onze online outlet shop! Op onze nieuwe outletshop kan je loopschoenen reserveren\n' +
+        'uit onze stock van oudere modellen. Zo kan je je favoriete schoen\n' +
+        'aan een ronde prijs op de kop tikken!\n' +
+        '\n' +
+        'Schoenen die je reserveert, worden in de winkel voor je aan de kant gezet\n' +
+        'zonder aankoopverplichting. Je kan ze dus eerst nog passen.\n' +
+        'Afrekenen doe je ook in de winkel zelf.\n' +
+        '\n' +
+        'We breiden de outletshop regelmatig uit, dus hou onze website zeker in de gaten.\n' +
+        'Momenteel staan er zelfs enkele tennisrackets op aan ronde prijzen!',
+        '2019/04/01',
+        '/img/promoshop.png'
+    ),
+    manualFacebookPostImport(
         'Marathon ready met de Polar Vantage M. De Vantage M limited edition is vanaf nu bij ons te verkrijgen. Je ontvangt een gratis polsband bij je aankoop.',
-        '2019/03/20',
+        '2019/03/21',
         '/img/vantagem.png'
     ),
     manualFacebookPostImport(
