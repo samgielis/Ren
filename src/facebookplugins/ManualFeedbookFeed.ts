@@ -3,6 +3,11 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Ideaal voor moeder- en vaderdag: een Polar sporthorloge! Voor de gelegenheid zijn de A370 en M430 modellen afgepreisd. De A370 is nu beschikbaar aan €119.90. De M430 is voor jou vanaf €149.90.',
+        '2019/05/02',
+        '/img/polarvadermoeder.png'
+    ),
+    manualFacebookPostImport(
         'NIEUW: Bezoek onze online outlet shop! Op onze nieuwe outletshop kan je loopschoenen reserveren\n' +
         'uit onze stock van oudere modellen. Zo kan je je favoriete schoen\n' +
         'aan een ronde prijs op de kop tikken!\n' +
