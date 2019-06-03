@@ -3,6 +3,15 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Geen inspiratie voor vaderdag? Met deze draadloze headphones van Aftershokz zit je nooit verkeerd! De Trekz Air comes to daddy voor slechts €119.95. De Trekz Titanium voor maar €79.95\n' +
+        '\n' +
+        'Dankzij de Bone Conduction Technology zitten deze oordopjes niet in je oor, maar op je junkbeenderen. Via trillingen wordt het geluid naar je oren gestuurd waardoor je niet afgesloten wordt van omgevingsgeluid, zoals het verkeer.\n' +
+        '\n' +
+        'Super handig tijdens het sporten dus!',
+        '2019/06/03',
+        '/img/aftershokz.png'
+    ),
+    manualFacebookPostImport(
         'Ideaal voor moeder- en vaderdag: een Polar sporthorloge! Voor de gelegenheid zijn de A370 en M430 modellen afgepreisd. De A370 is nu beschikbaar aan €119.90. De M430 is voor jou vanaf €149.90.',
         '2019/05/02',
         '/img/polarvadermoeder.png'
