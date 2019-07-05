@@ -3,7 +3,7 @@ import {Loadable} from "../Loadable";
 import {FacebookProxy} from "./FacebookProxy";
 import {FacebookPost} from "./FacebookPost";
 import {parseJSON} from "../util/JSONUtils";
-import {manualFacebookFeed} from "./ManualFeedbookFeed";
+import {manualFacebookFeed} from "./ManualFacebookFeed";
 
 export class FacebookFeed extends Loadable {
 
