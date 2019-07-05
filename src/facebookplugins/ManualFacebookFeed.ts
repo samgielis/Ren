@@ -3,6 +3,13 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+`Solden bij Ren Sport.
+Koopjes sportschoenen aan €10, €20 en €30.
+Grote opruiming van voetbalschoenen aan €30.`,
+        '2019/07/05',
+        'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/65677373_1131436756979953_4883110582686842880_n.jpg?_nc_cat=102&_nc_oc=AQnykVpje5lggP6vmG6IHWmdEIPa6SD2s3jJERcaW7cL_cmYFYbEPq_lkxGYN8DuV598p2RsOE5ZVZU9aP7ZkILn&_nc_ht=scontent-bru2-1.xx&oh=448b086a22660ba4e7a089f21f6fe6f7&oe=5DAC06B2'
+    ),
+    manualFacebookPostImport(
         'Geen inspiratie voor vaderdag? Met deze draadloze headphones van Aftershokz zit je nooit verkeerd! De Trekz Air comes to daddy voor slechts €119.95. De Trekz Titanium voor maar €79.95\n' +
         '\n' +
         'Dankzij de Bone Conduction Technology zitten deze oordopjes niet in je oor, maar op je junkbeenderen. Via trillingen wordt het geluid naar je oren gestuurd waardoor je niet afgesloten wordt van omgevingsgeluid, zoals het verkeer.\n' +
