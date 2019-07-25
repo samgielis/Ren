@@ -80,14 +80,7 @@ export class FacebookPost {
         if (this.message) {
             let title = document.createElement('h2');
             title.className = 'ren-newsfeed-item-title';
-
-            let firstSentence = this.message.match(firstSentenceRegex) || this.message.match(firstSentenceBeforeNewlineRegex);
-
-            if (firstSentence) {
-                title.innerHTML = firstSentence.map(function(s){
-                    return s.replace(/^\s+|\s+$/g,'');
-                })[0];
-            }
+            title.innerHTML = this.title;
             newsFeedContentContainer.appendChild(title);
         }
         

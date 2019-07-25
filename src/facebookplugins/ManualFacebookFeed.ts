@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        ` Een grootschalig onderzoek onder bijna 800 gebruikers bevestigt wat Herzog Medical al ruim 20 jaar uitdraagt. Het gebruik van compressiekousen onder sporters draagt op verschillende vlakken positief bij aan de prestatie. De sporter herstelt sneller, heeft minder last van blessures en sport vaak weer volledig blessurevrij. Ontdek Herzog nu in onze winkel! `,
+        '2019/07/25',
+        '/img/herzog.jpg',
+        'Herzog PRO Compressiekousen: bewezen effectief'
+    ),
+    manualFacebookPostImport(
 `Solden bij Ren Sport.
 Koopjes sportschoenen aan €10, €20 en €30.
 Grote opruiming van voetbalschoenen aan €30.`,
@@ -17,11 +23,6 @@ Grote opruiming van voetbalschoenen aan €30.`,
         'Super handig tijdens het sporten dus!',
         '2019/06/03',
         '/img/aftershokz.png'
-    ),
-    manualFacebookPostImport(
-        'Ideaal voor moeder- en vaderdag: een Polar sporthorloge! Voor de gelegenheid zijn de A370 en M430 modellen afgepreisd. De A370 is nu beschikbaar aan €119.90. De M430 is voor jou vanaf €149.90.',
-        '2019/05/02',
-        '/img/polarvadermoeder.png'
     ),
     manualFacebookPostImport(
         'NIEUW: Bezoek onze online outlet shop! Op onze nieuwe outletshop kan je loopschoenen reserveren\n' +
