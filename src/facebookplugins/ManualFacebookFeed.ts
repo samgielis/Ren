@@ -128,13 +128,14 @@ Grote opruiming van voetbalschoenen aan €30.`,
     // )*/
 ];
 
-function manualFacebookPostImport(message: string, date: string, picture: string): FBPostResponse {
+function manualFacebookPostImport(message: string, date: string, picture: string, title?: string): FBPostResponse {
     return {
         created_time: date,
         full_picture: picture,
         id: 'id',
         is_hidden: false,
         is_published: true,
+        title: title,
         message: message,
         from: {
             name: '',

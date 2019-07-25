@@ -22,10 +22,25 @@ export class FacebookPost {
         return this.info.id;
     }
 
+    public get title () : string {
+        if (this.info.title) {
+            return this.info.title;
+        }
+        let firstSentence = this.message.match(firstSentenceRegex) || this.message.match(firstSentenceBeforeNewlineRegex);
+
+        if (firstSentence) {
+            return firstSentence.map(function(s){
+                return s.replace(/^\s+|\s+$/g,'');
+            })[0];
+        }
+
+        return "Nieuws";
+    }
+
     public get message () : string {
         return this.info.message;
     }
-    
+
     public get picture () : ImageTag {
         if (this.info.full_picture) {
             let image = document.createElement('img');

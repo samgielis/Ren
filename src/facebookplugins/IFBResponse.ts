@@ -16,6 +16,7 @@ export interface FBFeedResponse extends FBResponse {
 }
 
 export interface FBPostResponse extends FBResponse {
+    title? : string;
     created_time : string;
     full_picture : string;
     id : string;
