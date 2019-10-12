@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        `Sinds deze week staat de eerste ASICS wall van Vlaanderen opgesteld in onze winkel in Tessenderlo. Kom zeker eens een kijkje nemen!`,
+        '2019/10/12',
+        '/img/asicswall.jpg',
+        'De allereerste ASICS wall van Vlaanderen? Je vindt \'m bij Ren!'
+    ),
+    manualFacebookPostImport(
         ` Een grootschalig onderzoek onder bijna 800 gebruikers bevestigt wat Herzog Medical al ruim 20 jaar uitdraagt. Het gebruik van compressiekousen onder sporters draagt op verschillende vlakken positief bij aan de prestatie. De sporter herstelt sneller, heeft minder last van blessures en sport vaak weer volledig blessurevrij. Ontdek Herzog nu in onze winkel! `,
         '2019/07/25',
         '/img/herzog.jpg',
