@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        `In November krijg je een gratis paar wandelsokken van Lowa/Meindl bij aankoop van een paar wandelschoenen!`,
+        '2019/11/02',
+        '/img/wandelen.jpg',
+        'November: Actiemaand wandelschoenen!'
+    ),
+    manualFacebookPostImport(
         `Sinds deze week staat de eerste ASICS wall van Vlaanderen opgesteld in onze winkel in Tessenderlo. Kom zeker eens een kijkje nemen!`,
         '2019/10/12',
         '/img/asicswall.jpg',
