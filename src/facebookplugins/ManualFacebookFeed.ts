@@ -3,13 +3,13 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
-        `De Nike Pegasus 35 koop je nu tijdelijk aan €75 voor volwassenen en €50 voor kids. Deze actie loopt tot en met 30 november, zolang de voorrad strekt.`,
+        `De Nike Pegasus 35 koop je nu tijdelijk aan €75 voor volwassenen en €50 voor kids. Deze actie loopt tot en met 30 november, zolang de voorraad strekt.`,
         '2019/11/22',
         '/img/bf2.jpg',
         'Pre-Black Friday actie Nike'
     ),
     manualFacebookPostImport(
-        `Voor Black Friday koop je deze sweater, broek en vest samen voor slechts 35 euro. Zolang de voorraad strekt`,
+        `Naar aanleiding van Black Friday koop je deze sweater, broek en vest samen voor slechts €35. Zolang de voorraad strekt`,
         '2019/11/22',
         '/img/bf1.jpg',
         'Pre-Black Friday actie Olympic'
