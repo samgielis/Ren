@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'De winkel is uitzonderlijk open op 24 en 31 december, van 9u30 tot 12.30 en van 13u30 tot 17u.',
+        '2019/12/23',
+        '/img/kerst.jpg',
+        `Open op 24 en 31 december`,
+    ),
+    manualFacebookPostImport(
         `Thermisch ondergoed van Odlo aan -20%! Deze actie loopt tot en met 30 november, zolang de voorraad strekt.`,
         '2019/11/25',
         '/img/bf3.jpg',
