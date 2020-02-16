@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Bij aankoop voor interclub vanaf 2 personen een korting van 20%. Ook nieuw: de collectie van Snauwaert!',
+        '2020/02/08',
+        '/img/tennis2020.jpg',
+        `Actie tennis`,
+    ),
+    manualFacebookPostImport(
         'De winkel is uitzonderlijk open op 24 en 31 december, van 9u30 tot 12.30 en van 13u30 tot 17u.',
         '2019/12/23',
         '/img/kerst.jpg',
