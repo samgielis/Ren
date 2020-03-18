@@ -2,7 +2,7 @@ import {FBHoursResponse} from "./IFBResponse";
 import {Loadable} from "../Loadable";
 import {FacebookProxy} from "./FacebookProxy";
 import {parseJSON} from "../util/JSONUtils";
-import {STANDARD_OPENING_HOURS} from "./ManualOpeningHours";
+import {EXCEPTIONAL_OPENING_HOURS, STANDARD_OPENING_HOURS} from "./ManualOpeningHours";
 
 export class FacebookOpeningInfo extends Loadable {
 
@@ -37,7 +37,7 @@ export class FacebookOpeningInfo extends Loadable {
                 this.loadFailed(roughdata.error);
             }
         }, () => {
-            this.parseData(<any>STANDARD_OPENING_HOURS);
+            this.parseData(<any>/*STANDARD_OPENING_HOURS*/ EXCEPTIONAL_OPENING_HOURS);
             this.loadSuccess();
         });
     }

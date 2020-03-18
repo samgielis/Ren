@@ -22,7 +22,7 @@ export const STANDARD_OPENING_HOURS = {
 };
 
 export const EXCEPTIONAL_OPENING_HOURS = {
-    hours: {
+    hours: {/*
         "thu_1": "09:30",
         "thu_2": "12:30",
         "thu_3": "13:30",
@@ -34,6 +34,6 @@ export const EXCEPTIONAL_OPENING_HOURS = {
         "sat_1": "09:30",
         "sat_2": "12:30",
         "sat_3": "13:30",
-        "sat_4": "18:30"
+        "sat_4": "18:30"*/
     }
 };
