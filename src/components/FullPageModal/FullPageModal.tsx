@@ -30,7 +30,10 @@ export class FullPageModal extends React.Component<FullPageModalProps, FullPageM
                 </p>
                 <p>
                     In het belang van de gezondheid van zowel personeel als klanten, heb ik besloten om de winkel
-                    voorlopig te sluiten tot en met 5 april.
+                    voorlopig te sluiten tot en met 5 april. Wel kan je ons contacteren om bepaalde bestellingen op te sturen via de post. Ook onze outlet shop blijft open.
+                </p>
+                <p>
+                    <a href={"https://shop.rensport.be/pages/aanbod-tijdens-corona-crisis"}>Lees hier meer.</a>
                 </p>
                 <p>
                     Bedankt voor jullie begrip.
