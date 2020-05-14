@@ -4,8 +4,8 @@ import {FullPageModal} from "../FullPageModal/FullPageModal";
 
 export class PageHeader extends React.Component<NavbarProps, {}> {
     render() {
+           /* <FullPageModal text={""}></FullPageModal>*/
         return <div>
-            <FullPageModal text={""}></FullPageModal>
             <MainLogo />
             <Navbar activeContext={this.props.activeContext}/>
         </div>
