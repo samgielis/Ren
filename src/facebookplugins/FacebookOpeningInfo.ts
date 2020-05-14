@@ -37,7 +37,7 @@ export class FacebookOpeningInfo extends Loadable {
                 this.loadFailed(roughdata.error);
             }
         }, () => {
-            this.parseData(<any>/*STANDARD_OPENING_HOURS*/ EXCEPTIONAL_OPENING_HOURS);
+            this.parseData(<any>STANDARD_OPENING_HOURS /* EXCEPTIONAL_OPENING_HOURS */);
             this.loadSuccess();
         });
     }
