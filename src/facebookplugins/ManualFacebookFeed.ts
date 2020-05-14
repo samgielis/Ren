@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'onze winkel in Tessenderlo is opnieuw open volgens de normale openingsuren. We hebben extra voorzorgsmaatregelen getroffen voor uw en onze veiligheid.',
+        '2020/05/14',
+         '/img/back.jpg',
+        `We zijn opnieuw open!`,
+    ),
+    manualFacebookPostImport(
         'Bij aankoop voor interclub vanaf 2 personen een korting van 20%. Ook nieuw: de collectie van Snauwaert!',
         '2020/02/08',
         '/img/tennis2020.jpg',
