@@ -28,6 +28,7 @@
     "webpack": "^4.29.6"
   },
   "scripts": {
-    "release": "webpack"
+    "release": "webpack",
+    "start": "http-server -p 80"
   }
 }
