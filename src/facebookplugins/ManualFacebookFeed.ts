@@ -9,7 +9,7 @@ export const manualFacebookFeed: FBPostResponse[] = [
         `Gesloten op 20 juli`,
     ),
     manualFacebookPostImport(
-        'onze winkel in Tessenderlo is opnieuw open volgens de normale openingsuren. We hebben extra voorzorgsmaatregelen getroffen voor uw en onze veiligheid.',
+        'Onze winkel in Tessenderlo is opnieuw open volgens de normale openingsuren. We hebben extra voorzorgsmaatregelen getroffen voor uw en onze veiligheid.',
         '2020/05/14',
          '/img/back.jpg',
         `We zijn opnieuw open!`,
