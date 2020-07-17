@@ -3,6 +3,12 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Maandag 20 juli zijn we uitzonderlijk gesloten. Vanaf woensdag 22 juli zijn we terug open om u verder te helpen met uw sportmateriaal. Geniet nog van een mooi en sportief weekend.',
+        '2020/07/17',
+         '/img/holiday.jpg',
+        `Gesloten op 20 juli`,
+    ),
+    manualFacebookPostImport(
         'onze winkel in Tessenderlo is opnieuw open volgens de normale openingsuren. We hebben extra voorzorgsmaatregelen getroffen voor uw en onze veiligheid.',
         '2020/05/14',
          '/img/back.jpg',
