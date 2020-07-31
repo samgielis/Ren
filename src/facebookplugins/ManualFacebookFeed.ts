@@ -3,6 +3,18 @@ import {FB_PAGE_ID} from "./FacebookProxy";
 
 export const manualFacebookFeed: FBPostResponse[] = [
     manualFacebookPostImport(
+        'Met het oog op de aankoop van loop- of wandelschoenen vragen wij om een extra paar propere sokken mee te brengen. Verder verzoeken wij om de corona maatregelen te respecteren.',
+        '2020/07/31',
+         '/img/facemask.jpg',
+        `Start van de solden op zaterdag 1 augustus`,
+    ),
+    manualFacebookPostImport(
+        'OUTLET: Wij hebben weer heel wat nieuwe loopschoenen in onze outlet geplaatst. Bekijk hier de dames-modellen: https://shop.rensport.be/collections/dames?sort_by=created-descending en hier de heren: https://shop.rensport.be/collections/heren?sort_by=created-descending',
+        '2020/07/18',
+         '/img/promoshop.png',
+        `Nieuwe lading outlet schoenen!`,
+    ),
+    manualFacebookPostImport(
         'Maandag 20 juli zijn we uitzonderlijk gesloten. Vanaf woensdag 22 juli zijn we terug open om u verder te helpen met uw sportmateriaal. Geniet nog van een mooi en sportief weekend.',
         '2020/07/17',
          '/img/holiday.jpg',
