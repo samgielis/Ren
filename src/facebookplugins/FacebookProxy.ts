@@ -22,7 +22,7 @@ export class FacebookProxy {
     succ: (info: FBResponse) => void,
     fail?: () => void
   ): void {
-    FacebookProxy.get("openinghours", succ, fail);
+    FacebookProxy.get("hours", succ, fail);
   }
 
   private static get(
