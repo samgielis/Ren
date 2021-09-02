@@ -22,6 +22,7 @@
   "dependencies": {
     "@types/react": "16.4.14",
     "@types/react-dom": "16.0.7",
+    "http-server": "^13.0.1",
     "react": "16.5.1",
     "react-dom": "16.5.1",
     "streamify": "^0.3.1",
@@ -29,6 +30,6 @@
   },
   "scripts": {
     "release": "webpack",
-    "start": "http-server -p 80"
+    "start": "http-server -p 8081"
   }
 }
