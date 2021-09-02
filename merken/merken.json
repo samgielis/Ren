@@ -29,7 +29,7 @@
       "img": "/img/merken/born.png"
     },{
       "name": "Bridgedale",
-      "img": "/img/merken/bridgedale.png"
+      "img": "/img/merken/bridgedale.jpg"
     },{
       "name": "Bremshey",
       "img": "/img/merken/bremshey.png"
@@ -71,7 +71,7 @@
       "img": "/img/merken/herzog.png"
     },{
       "name": "Joy",
-      "img": "/img/merken/joysport.jpg"
+      "img": "/img/merken/joy.png"
     },{
       "name": "K-Swiss",
       "img": "/img/merken/kswiss.png"
@@ -207,6 +207,15 @@
     },{
       "name": "New Balance",
       "img": "/img/merken/newbalance.png"
+    },{
+      "name": "On",
+      "img": "/img/merken/on.jpeg"
+    },{
+      "name": "Hot",
+      "img": "/img/merken/hot.png"
+    },{
+      "name": "Venice Beach",
+      "img": "/img/merken/venice.jpg"
     }
   ]
 }
