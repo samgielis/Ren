@@ -12,7 +12,7 @@
     background-image: url('/img/headers/vomero13.png');
     background-position-x: 50%;
     background-position-y: 50%;
-    background-size: 100%;
+    background-size: cover;
     transition: background-size 0.666s;
 
     padding-bottom: 4%;
