@@ -17,10 +17,8 @@ export class PageHeader extends React.Component<NavbarProps, {}> {
 class MainLogo extends React.Component {
   render() {
     return (
-      <div className="row ren-main-logo-container">
-        <div className="col-md-12">
+      <div className="ren-main-logo-container">
           <img className="ren-main-logo-img" src="/img/logo.png" />
-        </div>
       </div>
     );
   }
