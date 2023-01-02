@@ -17,7 +17,7 @@
     "typescript": "3.0.3",
     "vinyl-source-stream": "^1.1.2",
     "watchify": "^3.11.1",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "@types/react": "16.4.14",
