@@ -9,7 +9,7 @@
     "awesome-typescript-loader": "5.2.1",
     "browserify": "^13.3.0",
     "gulp": "^4.0.2",
-    "gulp-typescript": "^2.14.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
     "source-map-loader": "^0.2.4",
