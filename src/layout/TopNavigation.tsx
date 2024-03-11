@@ -14,10 +14,10 @@ import { ROUTE } from "../routes";
 
 export const TopNavigation = () => {
   return (
-    <Stack spacing={0} bg="dark" color={"light"} px={5} pt={5}>
+    <Stack spacing={0} bg="dark" color={"light"} px={5} pt={7}>
       <HStack>
         <InternalLink href={ROUTE.home}>
-          <Heading color="light" fontFamily={"Slipstream"} size="3xl" px={3}>
+          <Heading color="light" fontFamily={"Slipstream"} size="4xl" px={3}>
             REN
           </Heading>
         </InternalLink>
@@ -76,7 +76,7 @@ const NavButton = ({
     <Button
       as={InternalLink}
       href={to}
-      p={4}
+      px={4}
       py={7}
       isActive={isActive}
       textTransform="uppercase"
