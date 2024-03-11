@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Ren Sport - Specialist in Loopschoenen</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- REN CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/ren.css">
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+
+    <!-- REACT -->
+    <script src="/react.production.min.js" crossorigin></script>
+    <script src="/react-dom.production.min.js" crossorigin></script>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- TOOLTIP -->
+    <script src="/vendor/tooltip/Tooltip.js"></script>
+    <link rel="stylesheet" type="text/css" href="/vendor/tooltip/Tooltip.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122224869-1"></script>
+
+    <script>
+        window.RenSportConfig = {
+            context : 'contact',
+            loadHeader : true,
+            loadNewsFeed : false,
+            loadOpeningHours : true
+        };
+    </script>
+
+    <script src="/rensport.js"></script>
+</head>
+<body>
+<div class="ren-container container-fluid">
+    <div id='ren-header'>
+    </div>
+    <div class="container-fluid ren-white-background">
+
+        <div class="ren-main-content-container ren-middle-row row">
+            <div class="col-md-6 ren-homepage-column">
+                <h2 class='ren-content-item-title'>Contact</h2>
+                <div>
+                    <p class='ren-contact-shopname'>
+                        Ren Sport
+                    </p>
+                    <div style="display: inline-block">
+                        <table>
+                            <tr>
+                                <th style="text-align: center; ">
+                                    <i class="fa fa-user fa-lg"></i>
+                                </th>
+                                <td style="padding: 6px 0px" class='ren-contact-text'>
+                                    Christel Rogiers
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: center; ">
+                                    <i class="fa fa-home fa-lg"></i>
+                                </th>
+                                <td style="padding: 6px 0px" class='ren-contact-text'>
+                                    Geelsebaan 155
+                                    <br>
+                                    3980 Tessenderlo
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th style="text-align: center; ">
+                                    <i  class="fa fa-phone fa-lg"></i>
+                                </th>
+                                <td style="padding: 6px 0px" class='ren-contact-text'>
+                                    013 66 74 60
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: center; ">
+                                    <i class="fa fa-envelope fa-lg"></i>
+                                </th>
+                                <td style="padding: 6px 0px" class='ren-contact-text'>
+                                    info@rensport.be
+                                </td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: center; ">
+                                    <i class="fa fa-file-alt fa-xs">BTW</i>
+                                </th>
+                                <td style="padding: 6px 0px" class='ren-contact-text'>
+                                    BE 0463.922.690
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ren-homepage-column">
+                <h2 class='ren-content-item-title'>Openingsuren</h2>
+                <div id='ren-openingsuren-hook' class='ren-openingsuren' data-viewtype="modest">
+                </div>
+            </div>
+        </div>
+
+        <div class="ren-main-content-container ren-middle-row row">
+            <div class="col-md-12 ren-homepage-column">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16863.226584147553!2d5.074519686135313!3d51.076467047505275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd567da8a55b85a6!2sRen+Sport!5e0!3m2!1snl!2sbe!4v1477995544515" width="100%" height="350px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="ren-footer">
+    </div>
+</div>
+
+<div id="ren-openingsuren"></div>
+</body>
+</html>

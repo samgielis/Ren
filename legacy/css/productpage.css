@@ -1,0 +1,18 @@
+.ren-cta-green, .ren-cta-green:active {
+    display: block;
+    background-color: #66ae60;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 50%;
+    margin-left: 25%;
+    text-decoration: none;
+}
+
+.ren-cta-green:hover,  .ren-cta-green:visited {
+    color:white;
+    background-color: #6fbb67;
+    text-decoration: none;
+}
+
+.ren-cta-green:visited

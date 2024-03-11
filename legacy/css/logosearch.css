@@ -1,0 +1,60 @@
+/* DATAPOINT */
+.logosearch-datapoint {
+    margin-bottom: 10px;
+    min-height: 120px;
+}
+
+.logosearch-datapoint-hidden {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.logosearch-logo {
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.logosearch-logo-container {
+    height: 65px;
+    width: 100%;
+    position: relative;
+}
+
+.logosearch-name {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* SEARCHBAR */
+.logosearch-searchbar {
+    margin-bottom: 2.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.logosearch-input-container {
+    float: none;
+    margin: 0 auto;
+}
+
+.logosearch-searchicon {
+    border-radius: 0px;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    font-size: 1.5em;
+}
+
+.logosearch-input {
+    border-radius: 0px;
+    height: 3em;
+    font-family: 'Open Sans', sans-serif;
+}

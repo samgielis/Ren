@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Ren Sport - Ontdek onze merken</title>
+    <meta name="description" content="Ontdek alle merken van Ren Sport. Naast loopschoenen van onder meer Asics, Brooks, Saucony en Nike verkopen wij bijvoorbeeld ook sporthorloges, voeding en kleding, van meer dan 60 verschillende merken zoals Polar, Jack Wolfskin, Odlo en Björn Borg." />
+    <meta name="keywords" content="sportwinkel, loopschoenen, Tessenderlo, sport, sportkleding, outdoor, asics, saucony, nike, jack wolfskin, odlo,brooks, polar, sporthorloge">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="image_src" href="//rensport.be/img/main.png" />
+
+    <!-- OPEN GRAPH ATTRIBUTES-->
+    <meta property="fb:app_id"             content="215470341909937" />
+    <meta property="og:locale" 			   content="nl_BE" />
+    <meta property="og:locale:alternate"   content="nl_NL" />
+    <meta property="og:site_name"          content="Ren Sport" />
+    <meta property="og:url"                content="//rensport.be/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Ren Sport - Ontdek onze merken" />
+    <meta property="og:description"        content="Ontdek alle merken van Ren Sport. Naast loopschoenen van onder meer Asics, Brooks, Saucony en Nike verkopen wij bijvoorbeeld ook sporthorloges, voeding en kleding, van meer dan 60 verschillende merken zoals Polar, Jack Wolfskin, Odlo en Björn Borg." />
+    <meta property="og:image"              content="//rensport.be/img/main.png" />
+    <meta property="og:rich_attachment"    content=true />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- REN CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/ren.css">
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/disciplines.css">
+    <link rel="stylesheet" type="text/css" href="/css/merken.css">
+    <link rel="stylesheet" type="text/css" href="/css/logosearch.css">
+
+    <!-- REACT -->
+    <script src="/react.production.min.js" crossorigin></script>
+    <script src="/react-dom.production.min.js" crossorigin></script>
+
+    <!-- TOOLTIP -->
+    <script src="/vendor/tooltip/Tooltip.js"></script>
+    <link rel="stylesheet" type="text/css" href="/vendor/tooltip/Tooltip.css">
+</head>
+<body>
+<script>
+    window.RenSportConfig = {
+        context : 'merken',
+        loadHeader : true,
+        loadNewsFeed : false,
+        loadOpeningHours : false
+    };
+</script>
+<script src="/rensport.js"></script>
+<div class="ren-container container-fluid">
+    <div id='ren-header'>
+    </div>
+    <div class="container-fluid ren-white-background">
+
+        <div class="ren-main-content-container row">
+            <h1>Merken</h1>
+        </div>
+        <div class="logosearch ren-main-content-container ren-content-center ren-middle-row row" logosearch-data='./merken.json'>
+
+        </div>
+    </div>
+
+    <div id="ren-footer">
+    </div>
+</div>
+
+<div id="ren-openingsuren"></div>
+<script src="/logosearch.js"></script>
+</body>
+</html>

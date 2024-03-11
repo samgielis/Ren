@@ -1,0 +1,35 @@
+{
+  "entries": [
+    {
+      "name": "3Action",
+      "img": "/img/merken/3action.png"
+    },{
+      "name": "Barbaric Recovery",
+      "img": "/img/merken/barbaricrecovery.png"
+    },
+    {
+      "name": "Born",
+      "img": "/img/merken/born.png"
+    },
+    {
+      "name": "Leppin",
+      "img": "/img/merken/leppin.jpg"
+    },
+    {
+      "name": "Lucho Dillitos",
+      "img": "/img/merken/luchodillitos.png"
+    },
+    {
+      "name": "Overstim.s",
+      "img": "/img/merken/overstims.png"
+    },
+    {
+      "name": "Performance",
+      "img": "/img/merken/performance.png"
+    },
+    {
+      "name": "WCUP",
+      "img": "/img/merken/wcup.png"
+    }
+  ]
+}

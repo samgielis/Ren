@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Ren Sport - Specialist in Loopschoenen</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- REN CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/ren.css">
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/css/disciplines.css">
+
+    <!-- REACT -->
+    <script src="/react.production.min.js" crossorigin></script>
+    <script src="/react-dom.production.min.js" crossorigin></script>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- TOOLTIP -->
+    <script src="/vendor/tooltip/Tooltip.js"></script>
+    <link rel="stylesheet" type="text/css" href="/vendor/tooltip/Tooltip.css">
+
+    <style>
+        .myframe {
+            min-height: 70vh;
+            margin-bottom: 5vh;
+            height: 0;
+            overflow: hidden;
+            -webkit-overflow-scrolling:touch;
+        }
+        .myframe iframe {
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122224869-1"></script>
+
+    <script>
+        window.RenSportConfig = {
+            context : 'nieuwsbrief',
+            loadHeader : true,
+            loadNewsFeed : false,
+            loadOpeningHours : false
+        };
+    </script>
+
+    <script src="/rensport.js"></script>
+</head>
+<body>
+<div class="ren-container container-fluid">
+    <div id='ren-header'>
+    </div>
+    <div class="container-fluid ren-white-background">
+
+        <div class="ren-main-content-container row">
+            <div class='col-md-12 ren-homepage-column myframe'>
+                <h1 style='margin-top: 0; margin-left: 0'>Nieuwsbrief</h1>
+                <iframe sandbox='allow-top-navigation allow-same-origin allow-scripts' width="100%"  onload="resizeIframe(this)"
+                        src='https://vr2.verticalresponse.com/emails/17592186140008?contact_id=17592189538974&sk=a5JAB2JgQjBLZChNZAO8F5J4KksfNP4hs0l9caj-q_XE=/aHR0cHM6Ly92cjIudmVydGljYWxyZXNwb25zZS5jb20vZW1haWxzLzE3NTkyMTg2MTQwMDA4P2NvbnRhY3RfaWQ9MTc1OTIxODk1Mzg5NzQ=/YC2esbE5Ks95YvywowjCqg==' frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="ren-footer">
+    </div>
+</div>
+
+<div id="ren-openingsuren"></div>
+</body>
+</html>
