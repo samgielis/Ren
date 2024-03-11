@@ -1,0 +1,4 @@
+@font-face {
+    font-family: 'Slipstream';
+    src: local('Slipstream'), url(../public/slipstream.ttf) format('truetype');
+  }
