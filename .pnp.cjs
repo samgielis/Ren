@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:12.20.55"],\
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
+          ["date-fns", "npm:3.4.0"],\
           ["eslint", "npm:8.57.0"],\
           ["framer-motion", "virtual:f2d6aad305fe4dcafd9019a539d8159e4206da3cad105a2279603e9d0e019bf5a2a4adbd08ce231809813262eb83deb3dcfa4b64042c7c4ac352a3d79644d94c#npm:6.5.1"],\
           ["react", "npm:18.2.0"],\
@@ -10487,6 +10488,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["date-fns", [\
+      ["npm:3.4.0", {\
+        "packageLocation": "../../.yarn/berry/cache/date-fns-npm-3.4.0-77ddef82e4-10c0.zip/node_modules/date-fns/",\
+        "packageDependencies": [\
+          ["date-fns", "npm:3.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["debug", [\
       ["npm:2.6.9", {\
         "packageLocation": "../../.yarn/berry/cache/debug-npm-2.6.9-7d4cb597dc-10c0.zip/node_modules/debug/",\
@@ -18765,6 +18775,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:12.20.55"],\
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
+          ["date-fns", "npm:3.4.0"],\
           ["eslint", "npm:8.57.0"],\
           ["framer-motion", "virtual:f2d6aad305fe4dcafd9019a539d8159e4206da3cad105a2279603e9d0e019bf5a2a4adbd08ce231809813262eb83deb3dcfa4b64042c7c4ac352a3d79644d94c#npm:6.5.1"],\
           ["react", "npm:18.2.0"],\

@@ -6725,6 +6725,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "date-fns@npm:3.4.0"
+  checksum: e4395adcdf10b1784c6479b9d715ed9a1cb06c9d99b95607ad6db43b18371e22314d3e9e5509a378da1c5a6b34b313049bf82897b7f263f413e051f59e0ea5c2
+  languageName: node
+  linkType: hard
+
 "debug@npm:2.6.9, debug@npm:^2.6.0":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -13199,6 +13206,7 @@ __metadata:
     "@types/node": "npm:^12.0.0"
     "@types/react": "npm:^18.0.9"
     "@types/react-dom": "npm:^18.0.4"
+    date-fns: "npm:^3.4.0"
     eslint: "npm:^8.57.0"
     framer-motion: "npm:^6.2.9"
     react: "npm:^18.1.0"
