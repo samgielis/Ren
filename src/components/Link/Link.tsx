@@ -16,5 +16,10 @@ export const InternalLink = forwardRef((props: ChakraLinkProps, ref) => (
 ));
 
 export const ExternalLink = forwardRef((props: ChakraLinkProps, ref) => (
-  <ChakraLink {...props} ref={ref} _hover={{ textDecor: "none" }} />
+  <ChakraLink
+    {...props}
+    ref={ref}
+    _hover={{ textDecor: "none" }}
+    target={"_blank"}
+  />
 ));
