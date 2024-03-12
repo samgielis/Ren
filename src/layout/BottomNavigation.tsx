@@ -17,10 +17,10 @@ import { ROUTE } from "../routes";
 
 export const BottomNavigation = () => {
   return (
-    <Container bg="dark" maxW="full" color="light">
+    <Container bg="dark" maxW="full" color="light" px={{ base: 4, sm: 10 }}>
       <Stack
         divider={<StackDivider opacity={0.2} />}
-        p={{ base: 5, sm: 10 }}
+        py={{ base: 5, sm: 10 }}
         spacing={10}
       >
         <Stack

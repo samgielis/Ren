@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Card,
+  Container,
   GridItem,
   Heading,
   HStack,
@@ -46,45 +47,52 @@ export const Newsfeed = () => {
   }, []);
 
   return (
-    <Stack bgColor="accent.100" p={10} spacing={10}>
-      <HStack>
-        <Heading
-          size="md"
-          bg="dark"
-          p={3}
-          color="light"
-          display={"inline-block"}
-          fontWeight="normal"
+    <Container
+      maxW={"full"}
+      bgColor="accent.100"
+      py={10}
+      px={{ base: 4, sm: 10 }}
+    >
+      <Stack spacing={10}>
+        <HStack>
+          <Heading
+            size="md"
+            bg="dark"
+            p={3}
+            color="light"
+            display={"inline-block"}
+            fontWeight="normal"
+          >
+            Updates
+          </Heading>
+          <Spacer />
+          <Button
+            as={ExternalLink}
+            href="https://www.facebook.com/rentessenderlo"
+            colorScheme={"accent"}
+            size="lg"
+            rightIcon={<FaFacebook />}
+          >
+            Volg ons op Facebook
+          </Button>
+        </HStack>
+        <SimpleGrid
+          columns={{ base: 1, md: 2, lg: 3, "2xl": 4 }}
+          columnGap={5}
+          rowGap={5}
+          alignItems="stretch"
         >
-          Updates
-        </Heading>
-        <Spacer />
-        <Button
-          as={ExternalLink}
-          href="https://www.facebook.com/rentessenderlo"
-          colorScheme={"accent"}
-          size="lg"
-          rightIcon={<FaFacebook />}
-        >
-          Volg ons op Facebook
-        </Button>
-      </HStack>
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, "2xl": 4 }}
-        columnGap={5}
-        rowGap={5}
-        alignItems="stretch"
-      >
-        {data.data
-          .filter((p) => !!p.message)
-          .slice(0, 6)
-          .map((post) => (
-            <GridItem key={post.id} w="full" h="full">
-              <NewsFeedPostCard post={post} />
-            </GridItem>
-          ))}
-      </SimpleGrid>
-    </Stack>
+          {data.data
+            .filter((p) => !!p.message)
+            .slice(0, 6)
+            .map((post) => (
+              <GridItem key={post.id} w="full" h="full">
+                <NewsFeedPostCard post={post} />
+              </GridItem>
+            ))}
+        </SimpleGrid>
+      </Stack>
+    </Container>
   );
 };
 
