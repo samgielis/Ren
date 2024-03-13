@@ -1,14 +1,13 @@
 import {
-  AspectRatio,
-  Box,
   Button,
   Card,
   Container,
   GridItem,
   Heading,
   HStack,
-  Image,
   SimpleGrid,
+  Skeleton,
+  SkeletonText,
   Spacer,
   Stack,
   Text,
@@ -20,6 +19,8 @@ import { setDefaultOptions } from "date-fns/setDefaultOptions";
 import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaFacebook } from "react-icons/fa";
 import { ExternalLink } from "../../components/Link/Link";
+import { SectionHeading } from "../../components/SectionHeading";
+import { SquareImage } from "../../components/SquareImage";
 
 type NewsFeedPost = {
   full_picture: string;
@@ -35,15 +36,17 @@ type NewsFeedPost = {
   message: string;
 };
 type NewsFeed = {
-  data: NewsFeedPost[];
+  data: NewsFeedPost[] | undefined;
 };
 export const Newsfeed = () => {
   const [data, setData] = useState<NewsFeed>({ data: [] });
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     fetch("https://ren-fb-proxy.netlify.app/.netlify/functions/news")
       .then((response) => response.json())
-      .then(setData);
+      .then(setData)
+      .finally(() => setIsLoading(false));
   }, []);
 
   return (
@@ -55,16 +58,7 @@ export const Newsfeed = () => {
     >
       <Stack spacing={10}>
         <HStack>
-          <Heading
-            size="md"
-            bg="dark"
-            p={3}
-            color="light"
-            display={"inline-block"}
-            fontWeight="normal"
-          >
-            Updates
-          </Heading>
+          <SectionHeading>Updates</SectionHeading>
           <Spacer />
           <Button
             as={ExternalLink}
@@ -82,21 +76,70 @@ export const Newsfeed = () => {
           rowGap={5}
           alignItems="stretch"
         >
-          {data.data
-            .filter((p) => !!p.message)
-            .slice(0, 6)
-            .map((post) => (
-              <GridItem key={post.id} w="full" h="full">
-                <NewsFeedPostCard post={post} />
-              </GridItem>
-            ))}
+          {isLoading ? (
+            <NewsFeedItemSkeleton />
+          ) : (
+            <NewsFeedItems posts={data.data ?? []} />
+          )}
         </SimpleGrid>
       </Stack>
     </Container>
   );
 };
 
+const NewsFeedItemSkeleton = () => {
+  return (
+    <>
+      {[0, 1, 2, 3, 4, 5].map((id) => (
+        <GridItem key={id} w="full" h="full">
+          <NewsFeedPostCardLayout asSkeleton />
+        </GridItem>
+      ))}
+    </>
+  );
+};
+
+const NewsFeedItems = ({ posts }: { posts: NewsFeedPost[] }) => {
+  return (
+    <>
+      {posts
+        .filter((p) => !!p.message)
+        .slice(0, 6)
+        .map((post) => (
+          <GridItem key={post.id} w="full" h="full">
+            <NewsFeedPostCard post={post} />
+          </GridItem>
+        ))}
+    </>
+  );
+};
+
 const NewsFeedPostCard = ({ post }: { post: NewsFeedPost }) => {
+  setDefaultOptions({ locale: nlBE });
+
+  return (
+    <NewsFeedPostCardLayout
+      message={post.message}
+      imgUrl={post.full_picture}
+      permaLink={post.permalink_url}
+      dateString={format(new Date(post.created_time), "PPP")}
+    />
+  );
+};
+
+const NewsFeedPostCardLayout = ({
+  dateString,
+  permaLink,
+  message,
+  imgUrl,
+  asSkeleton,
+}: {
+  dateString?: string;
+  permaLink?: string;
+  message?: string;
+  imgUrl?: string;
+  asSkeleton?: boolean;
+}) => {
   setDefaultOptions({ locale: nlBE });
 
   return (
@@ -110,53 +153,36 @@ const NewsFeedPostCard = ({ post }: { post: NewsFeedPost }) => {
         <Stack spacing={4} flex={1}>
           <HStack>
             <Heading size="md" color="accent.500">
-              {format(new Date(post.created_time), "PPP")}
+              <SkeletonText isLoaded={!asSkeleton} noOfLines={1}>
+                {dateString}
+              </SkeletonText>
             </Heading>
             <Spacer />
             <Button
               size="sm"
               variant="ghost"
               as={ExternalLink}
-              href={post.permalink_url}
+              href={permaLink}
               colorScheme="accent"
               rightIcon={<FaExternalLinkAlt />}
             >
               bekijk post
             </Button>
           </HStack>
-          <Text>{post.message}</Text>
+          <Text>
+            <SkeletonText
+              isLoaded={!asSkeleton}
+              noOfLines={Math.floor(Math.random() * 5) + 2}
+            >
+              {message}
+            </SkeletonText>
+          </Text>
         </Stack>
         <Spacer />
-        <AlwaysSquareImage src={post.full_picture} />
+        <Skeleton isLoaded={!asSkeleton} borderRadius="md">
+          <SquareImage src={imgUrl ?? ""} />
+        </Skeleton>
       </Stack>
     </Card>
-  );
-};
-
-const AlwaysSquareImage = ({ src }: { src: string }) => {
-  return (
-    <Box bg="accent.100" borderRadius={"lg"} overflow="hidden">
-      <AspectRatio ratio={1 / 1}>
-        <Box pos="relative">
-          <Image
-            pos="absolute"
-            src={src}
-            w="full"
-            h="full"
-            filter="blur(10px)"
-            objectFit={"cover"}
-            opacity={0.5}
-          />
-          <Image
-            pos="absolute"
-            zIndex={2}
-            objectFit={"contain"}
-            src={src}
-            w="full"
-            h="full"
-          />
-        </Box>
-      </AspectRatio>
-    </Box>
   );
 };
