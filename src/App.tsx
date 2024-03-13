@@ -1,7 +1,9 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import { MainLayout } from "./layout/MainLayout";
 import { ROUTE } from "./routes";
+import { Contact } from "./screens/Contact";
 import { Home } from "./screens/Home";
 
 export const App = () => (
@@ -40,6 +42,19 @@ export const App = () => (
             },
           },
         },
+        Heading: {
+          sizes: {
+            md: {
+              fontWeight: "regular",
+            },
+            lg: {
+              fontWeight: "regular",
+            },
+            xl: {
+              fontWeight: "regular",
+            },
+          },
+        },
       },
     })}
   >
@@ -51,7 +66,11 @@ export const App = () => (
 const router = createBrowserRouter([
   {
     path: ROUTE.home,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    ),
   },
   {
     path: ROUTE.running,
@@ -75,6 +94,10 @@ const router = createBrowserRouter([
   },
   {
     path: ROUTE.contact,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Contact />
+      </MainLayout>
+    ),
   },
 ]);
