@@ -26,10 +26,17 @@ export const ContactSection = () => (
           >
             info@rensport.be
           </Button>
-          <Button leftIcon={<FaPhoneAlt />}> 013 66 74 60</Button>
+          <Button
+            as={ExternalLink}
+            href="tel:+3213667460"
+            leftIcon={<FaPhoneAlt />}
+          >
+            {" "}
+            013 66 74 60
+          </Button>
         </ButtonGroup>
       </Stack>
-      <Text>BTW - BE 0463.922.690</Text>
+      <Text color={"lightish"}>BTW - BE 0463.922.690</Text>
     </Stack>
   </NavigationSection>
 );

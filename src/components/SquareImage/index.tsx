@@ -1,8 +1,14 @@
-import { AspectRatio, Box, Image } from "@chakra-ui/react";
+import { AspectRatio, Box, BoxProps, Image } from "@chakra-ui/react";
 
-export const SquareImage = ({ src }: { src: string }) => {
+export const SquareImage = ({
+  src,
+  borderRadius,
+}: {
+  src: string;
+  borderRadius?: BoxProps["borderRadius"];
+}) => {
   return (
-    <Box bg="accent.100" borderRadius={"lg"} overflow="hidden">
+    <Box bg="accent.100" overflow="hidden" borderRadius={borderRadius}>
       <AspectRatio ratio={1 / 1}>
         <>
           {src && (

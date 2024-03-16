@@ -1,7 +1,6 @@
 import {
   Button,
   Card,
-  Container,
   GridItem,
   Heading,
   HStack,
@@ -19,6 +18,7 @@ import { setDefaultOptions } from "date-fns/setDefaultOptions";
 import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaFacebook } from "react-icons/fa";
 import { ExternalLink } from "../../components/Link/Link";
+import { Section } from "../../components/Section";
 import { SectionHeading } from "../../components/SectionHeading";
 import { SquareImage } from "../../components/SquareImage";
 
@@ -50,12 +50,7 @@ export const Newsfeed = () => {
   }, []);
 
   return (
-    <Container
-      maxW={"full"}
-      bgColor="accent.100"
-      py={10}
-      px={{ base: 4, sm: 10 }}
-    >
+    <Section bgColor="accent.100">
       <Stack spacing={10}>
         <HStack>
           <SectionHeading>Updates</SectionHeading>
@@ -83,7 +78,7 @@ export const Newsfeed = () => {
           )}
         </SimpleGrid>
       </Stack>
-    </Container>
+    </Section>
   );
 };
 
@@ -180,7 +175,7 @@ const NewsFeedPostCardLayout = ({
         </Stack>
         <Spacer />
         <Skeleton isLoaded={!asSkeleton} borderRadius="md">
-          <SquareImage src={imgUrl ?? ""} />
+          <SquareImage borderRadius={"lg"} src={imgUrl ?? ""} />
         </Skeleton>
       </Stack>
     </Card>

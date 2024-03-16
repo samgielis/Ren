@@ -74,23 +74,43 @@ const router = createBrowserRouter([
   },
   {
     path: ROUTE.running,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    ),
   },
   {
     path: ROUTE.tennisAndPadel,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    ),
   },
   {
     path: ROUTE.sportvoeding,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    ),
   },
   {
     path: ROUTE.meer,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    ),
   },
   {
     path: ROUTE.services,
-    element: <Home />,
+    element: (
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    ),
   },
   {
     path: ROUTE.contact,

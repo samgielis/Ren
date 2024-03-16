@@ -1,5 +1,8 @@
 import { Box, Button, ButtonGroup, Heading, Stack } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
+import { InternalLink } from "../../components/Link/Link";
+import { ROUTE } from "../../routes";
+import { AanpakSection } from "./AanpakSection";
 import { Newsfeed } from "./Newsfeed";
 
 export const Home = () => {
@@ -9,7 +12,7 @@ export const Home = () => {
         bgImage={"/img/beachrun.jpg"}
         pos="relative"
         w="full"
-        aspectRatio={16 / 7}
+        aspectRatio={32 / 15}
         backgroundSize="cover"
       >
         <Stack pos="absolute" top={"40%"} left={10} spacing={4}>
@@ -23,13 +26,21 @@ export const Home = () => {
             All-in voor jouw loopcomfort
           </Heading>
           <ButtonGroup size="lg" spacing={4}>
-            <Button>Kom langs in de winkel</Button>
-            <Button colorScheme="accent" rightIcon={<FaArrowRight />}>
+            <Button as={InternalLink} href={ROUTE.contact}>
+              Kom langs in de winkel
+            </Button>
+            <Button
+              colorScheme="accent"
+              as={InternalLink}
+              href="#aanpak"
+              rightIcon={<FaArrowRight />}
+            >
               Onze aanpak
             </Button>
           </ButtonGroup>
         </Stack>
       </Box>
+      <AanpakSection />
       <Newsfeed />
     </Stack>
   );
