@@ -11,6 +11,7 @@ import {
 import { InternalLink } from "../../components/Link/Link";
 import { ROUTE } from "../../routes";
 import { ContactSection } from "./ContactSection";
+import { OpeningHoursSection } from "./OpeningHoursSection";
 import { SiteNavSection } from "./SiteNavSection";
 
 export const BottomNavigation = () => {
@@ -27,8 +28,10 @@ export const BottomNavigation = () => {
           align="start"
           direction={{ base: "column", md: "row" }}
         >
-          <ContactSection />
           <SiteNavSection />
+          <ContactSection />
+          <Spacer />
+          <OpeningHoursSection />
         </Stack>
 
         <BrandFooter />

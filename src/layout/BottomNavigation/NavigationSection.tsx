@@ -7,7 +7,14 @@ export const NavigationSection = ({
 }: PropsWithChildren<{ title: string }>) => {
   return (
     <Stack align="start" spacing={8}>
-      <Heading size="lg" textTransform="uppercase" fontWeight={"regular"}>
+      <Heading
+        size="lg"
+        textTransform="uppercase"
+        fontWeight={"regular"}
+        borderBottom="3px solid"
+        pb={2}
+        borderColor={"accent.300"}
+      >
         {title}
       </Heading>
       {children}
